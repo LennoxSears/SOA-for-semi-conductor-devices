@@ -1,0 +1,16 @@
+Complete SOA Rules Extraction Log
+========================================
+
+⚪     Versions    : No parameters found
+⚪ Device Summary by Method: No parameters found
+✅ 10HV SOA SYM ON-OFF: 158 parameters
+✅ 10HV SOA CAPS: 43 parameters
+✅ 10HV SOA SUB Well : 67 parameters
+✅ 10HV SOA OXRisk Drift : 96 parameters
+✅ 10HV SOA SUB Well HV : 49 parameters
+✅ 10HV HV ON : 193 parameters
+⚪ 10HV HCI-TDDB: No parameters found
+✅ 10HV Diodes FWD-REV: 7 parameters
+✅ Resistors: 26 parameters
+✅ 10HV BJT REV : 37 parameters
+✅ MOS Monitor vs Smoke: 68 parameters

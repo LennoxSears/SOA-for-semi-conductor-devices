@@ -1,0 +1,199 @@
+soa_rules:
+  devices:
+    capacitor_general:
+      device_type: capacitor
+      multi_level:
+        enabled: true
+        tmaxfrac_levels:
+        - 0.1
+        - 0.01
+        - 0.0
+      parameters:
+        vhigh_tb:
+          description: high severity limit for vhigh_tb
+          name: vhigh_tb
+          severity: high
+          type: voltage
+          unit: V
+          values:
+            multi_level:
+              '0.0': 130.0
+              '0.01': 125.0
+              '0.1': 120.0
+        vhigh_tnw:
+          description: high severity limit for vhigh_tnw
+          name: vhigh_tnw
+          severity: high
+          type: voltage
+          unit: V
+          values:
+            multi_level:
+              '0.0': 6.917
+              '0.01': 6.595
+              '0.1': 5.5
+        vlow_tb:
+          description: high severity limit for vlow_tb
+          name: vlow_tb
+          severity: high
+          type: voltage
+          unit: V
+          values:
+            multi_level:
+              '0.0': -130.0
+              '0.01': -125.0
+              '0.1': -120.0
+        vlow_tnw:
+          description: high severity limit for vlow_tnw
+          name: vlow_tnw
+          severity: high
+          type: voltage
+          unit: V
+          values:
+            multi_level:
+              '0.0': -6.917
+              '0.01': -6.595
+              '0.1': -5.5
+      subcategory: general
+    mos_transistor_symmetric_on_off:
+      device_type: mos_transistor
+      multi_level:
+        enabled: true
+        tmaxfrac_levels:
+        - 0.1
+        - 0.01
+        - 0.0
+      parameters:
+        vfwd_jun_off:
+          description: high severity limit for vfwd_jun_off
+          name: vfwd_jun_off
+          severity: high
+          type: general
+          unit: V
+          values:
+            multi_level:
+              '0.0': no-limit
+              '0.01': no-limit
+              '0.1': no-limit
+        vfwd_jun_on:
+          description: high severity limit for vfwd_jun_on
+          name: vfwd_jun_on
+          severity: high
+          type: general
+          unit: V
+          values:
+            multi_level:
+              '0.0': no-limit
+              '0.01': no-limit
+              '0.1': no-limit
+        vhigh_ds_off:
+          description: high severity limit for vhigh_ds_off
+          name: vhigh_ds_off
+          severity: high
+          type: voltage
+          unit: V
+          values:
+            multi_level:
+              '0.0': 6.505400000000001
+              '0.01': 6.200700000000001
+              '0.1': 6.050000000000001
+        vhigh_ds_on:
+          description: high severity limit for vhigh_ds_on
+          name: vhigh_ds_on
+          severity: high
+          type: voltage
+          unit: V
+          values:
+            multi_level:
+              '0.0': 5.914000000000001
+              '0.01': 5.6370000000000005
+              '0.1': 5.5
+        vhigh_gb_on:
+          description: high severity limit for vhigh_gb_on
+          name: vhigh_gb_on
+          severity: high
+          type: voltage
+          unit: V
+          values:
+            multi_level:
+              '0.0': no-limit
+              '0.01': no-limit
+              '0.1': 6.917
+        vhigh_gc:
+          description: high severity limit for vhigh_gc
+          name: vhigh_gc
+          severity: high
+          type: voltage
+          unit: V
+          values:
+            multi_level:
+              '0.0': 6.917
+              '0.01': 6.595
+              '0.1': 5.5
+        vlow_gb_on:
+          description: high severity limit for vlow_gb_on
+          name: vlow_gb_on
+          severity: high
+          type: voltage
+          unit: V
+          values:
+            multi_level:
+              '0.0': no-limit
+              '0.01': no-limit
+              '0.1': -6.917
+        vlow_gc:
+          description: high severity limit for vlow_gc
+          name: vlow_gc
+          severity: high
+          type: voltage
+          unit: V
+          values:
+            multi_level:
+              '0.0': -6.917
+              '0.01': -6.595
+              '0.1': -5.5
+        vrev_jun_off:
+          description: high severity limit for vrev_jun_off
+          name: vrev_jun_off
+          severity: high
+          type: general
+          unit: V
+          values:
+            multi_level:
+              '0.0': no-limit
+              '0.01': no-limit
+              '0.1': -6.800000000000001
+        vrev_jun_on:
+          description: high severity limit for vrev_jun_on
+          name: vrev_jun_on
+          severity: high
+          type: general
+          unit: V
+          values:
+            multi_level:
+              '0.0': no-limit
+              '0.01': no-limit
+              '0.1': -6.800000000000001
+      subcategory: symmetric_on_off
+    oxide_reliability_drift:
+      device_type: oxide
+      multi_level:
+        enabled: false
+        tmaxfrac_levels: []
+      parameters: {}
+      subcategory: reliability_drift
+    substrate_well_hv:
+      device_type: substrate
+      multi_level:
+        enabled: false
+        tmaxfrac_levels:
+        - 0.0
+      parameters: {}
+      subcategory: well_hv
+  global_config:
+    technology: smos10hv
+    temperature_scaling:
+      enabled: true
+      method: tmaxfrac
+    version: '1.0'
+  technology: smos10hv
+  version: '1.0'
