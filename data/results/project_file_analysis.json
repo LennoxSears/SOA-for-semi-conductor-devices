@@ -1,0 +1,122 @@
+{
+  "extraction_tools": {
+    "description": "Tools for extracting SOA rules from Excel",
+    "files": [
+      "enhanced_extractor.py",
+      "improved_extraction_summary.txt",
+      "project_organization.py",
+      "complete_rule_extractor.py",
+      "improved_tmaxfrac_extractor.py",
+      "DEVICE_GROUPED_EXTRACTION.md",
+      "analyze_extraction_gap.py",
+      "enhanced_extraction_summary.txt",
+      "final_results_generator.py",
+      "device_grouped_extractor.py",
+      "final_extraction_report.md",
+      "identify_all_patterns.py",
+      "complete_extraction_log.txt",
+      "analyze_excel.py",
+      "complete_extraction_audit.py",
+      "extraction_summary.txt",
+      "COMPLETE_EXTRACTION_REPORT.md",
+      "excel_to_dsl_converter.py",
+      "soa_rules.py",
+      "simple_device_mapper.py",
+      "src/soa_rules/complete_rule_extractor.py",
+      "src/soa_rules/loader.py",
+      "src/soa_rules/complete_extraction_audit.py"
+    ]
+  },
+  "dsl_implementation": {
+    "description": "DSL specification and implementation",
+    "files": [
+      "soa_dsl_specification.py",
+      "SOA_DSL_Presentation.md",
+      "SOA_DSL_Proposal.md",
+      "demo_soa_dsl.py",
+      "soa_dsl_implementation.py",
+      "soa_dsl_specification.json",
+      "tests/test_soa_dsl.py",
+      "src/soa_rules/demo_soa_dsl.py",
+      "src/soa_rules/soa_dsl_implementation.py"
+    ]
+  },
+  "proposal_documents": {
+    "description": "Business proposal and presentation materials",
+    "files": [
+      "workflow_analysis.py",
+      "automation_benefits_analysis.py",
+      "workflow_analysis.json",
+      "implementation_architecture.py"
+    ]
+  },
+  "analysis_reports": {
+    "description": "Analysis reports and summaries",
+    "files": [
+      "validation_summary.py",
+      "detailed_analysis.py",
+      "FINAL_SUMMARY.md",
+      "precise_analysis.py",
+      "device_summary.txt",
+      "corrected_tmaxfrac_analysis.py",
+      "conversion_log.txt",
+      "src/soa_rules/validation_summary.py",
+      "src/soa_rules/corrected_tmaxfrac_analysis.py"
+    ]
+  },
+  "extracted_data": {
+    "description": "Extracted SOA rules and device data",
+    "files": [
+      "complete_soa_rules.json",
+      "simple_device_mapping.json",
+      "improved_device_grouped_rules.json",
+      "device_grouped_soa_rules.json",
+      "soa_toolchain_architecture.json",
+      "final_soa_device_rules.json",
+      "pattern_mapping.json",
+      "enhanced_device_grouped_rules.json",
+      "soa_rules.json",
+      "soa_automation_analysis.json"
+    ]
+  },
+  "validation_tools": {
+    "description": "Validation and comparison tools",
+    "files": [
+      "test_single_sheet.py",
+      "soa_automation_comparison.png",
+      "validation_comparison.py"
+    ]
+  },
+  "visualization": {
+    "description": "Charts and visual assets",
+    "files": [
+      "soa_roi_timeline.png"
+    ]
+  },
+  "source_data": {
+    "description": "Original Excel files and source data",
+    "files": [
+      "SMOS10HV_SOA_Multi_PlusSmoke_Update_EngrRel_v3.17ER_06122025  2.xlsx"
+    ]
+  },
+  "configuration": {
+    "description": "Project configuration and setup files",
+    "files": [
+      "POETRY_SETUP.md",
+      "tests/__init__.py",
+      "src/soa_rules/__init__.py"
+    ]
+  },
+  "documentation": {
+    "description": "Documentation and README files",
+    "files": [
+      "README.md"
+    ]
+  },
+  "legacy_files": {
+    "description": "Old or superseded files",
+    "files": [
+      "debug_conversion.py"
+    ]
+  }
+}

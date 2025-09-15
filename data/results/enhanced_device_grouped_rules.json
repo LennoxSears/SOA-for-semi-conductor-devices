@@ -1,0 +1,4113 @@
+{
+  "core_nmos_NMOS_Core": {
+    "device_info": {
+      "name": "NMOS Core",
+      "type": "mos_transistor",
+      "category": "core",
+      "subcategory": "nmos",
+      "description": "core nmos, nmos_LL, nmos_ULL",
+      "source_sheet": "10HV SOA SYM ON-OFF"
+    },
+    "parameters": [
+      {
+        "name": "vhigh_ds_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 1.65,
+          "col_3": 1.71,
+          "col_4": 1.8379999999999999
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 1.71,
+          "0.01": 1.8379999999999999
+        },
+        "source_row": 7,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": 1.815,
+          "col_3": 1.881,
+          "col_4": 2.9999999999999996
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 1.881,
+          "0.01": 2.9999999999999996
+        },
+        "source_row": 8,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": 1.65,
+          "col_3": 1.969,
+          "col_4": 2.073
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 1.969,
+          "0.01": 2.073
+        },
+        "source_row": 9,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": -1.65,
+          "col_3": -1.969,
+          "col_4": -2.073
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -1.969,
+          "0.01": -2.073
+        },
+        "source_row": 10,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 3.3,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 12-17, changed column D to no-limit\nreduced vhigh_gb_on to match original definition one 1 core Vsb above Vdd, should not be based on higher 1% voltage allowance as before"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 11,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -2.073,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 12-17, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 12,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 12-17, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 13,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -3.3,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 12-17, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 14,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 12-17, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 15,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": -3.3,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 12-17, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 16,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 1.65,
+          "col_3": 1.885,
+          "col_4": 2.079
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 1.885,
+          "0.01": 2.079
+        },
+        "source_row": 23,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": 1.815,
+          "col_3": 2.0735,
+          "col_4": 2.9999999999999996
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 2.0735,
+          "0.01": 2.9999999999999996
+        },
+        "source_row": 24,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": 1.65,
+          "col_3": 1.8479999999999999,
+          "col_4": 1.9529999999999998
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 1.8479999999999999,
+          "0.01": 1.9529999999999998
+        },
+        "source_row": 25,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": -1.65,
+          "col_3": -1.8479999999999999,
+          "col_4": -1.9529999999999998
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -1.8479999999999999,
+          "0.01": -1.9529999999999998
+        },
+        "source_row": 26,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 3.3,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 12-17, changed column D to no-limit\nreduced vhigh_gb_on to match original definition one 1 core Vsb above Vdd, should not be based on higher 1% voltage allowance as before"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 27,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -1.9529999999999998,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 28-33, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 28,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 28-33, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 29,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -3.3,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 28-33, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 30,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 28-33, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 31,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": -3.3,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 28-33, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 32,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 5.6115,
+          "col_4": 5.773000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 5.6115,
+          "0.01": 5.773000000000001
+        },
+        "source_row": 39,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": 6.050000000000001,
+          "col_3": 6.172650000000001,
+          "col_4": 6.35
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.172650000000001,
+          "0.01": 6.35
+        },
+        "source_row": 40,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 6.646,
+          "col_4": 7.101000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.646,
+          "0.01": 7.101000000000001
+        },
+        "source_row": 41,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": -5.5,
+          "col_3": -6.646,
+          "col_4": -7.101000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -6.646,
+          "0.01": -7.101000000000001
+        },
+        "source_row": 42,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 7.101000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 43,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -7.101000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 44,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 45,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -8.0,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 46,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 47,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": -8.0,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 48,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 5.6370000000000005,
+          "col_4": 5.914000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 5.6370000000000005,
+          "0.01": 5.914000000000001
+        },
+        "source_row": 55,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": 6.050000000000001,
+          "col_3": 6.200700000000001,
+          "col_4": 6.505400000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.200700000000001,
+          "0.01": 6.505400000000001
+        },
+        "source_row": 56,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 6.595,
+          "col_4": 6.917
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.595,
+          "0.01": 6.917
+        },
+        "source_row": 57,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": -5.5,
+          "col_3": -6.595,
+          "col_4": -6.917
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -6.595,
+          "0.01": -6.917
+        },
+        "source_row": 58,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 6.917,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 59,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -6.917,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 60,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 61,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -6.800000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 62,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 63,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": -6.800000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 64,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.1,
+      0.01,
+      0.0
+    ],
+    "rule_count": 40
+  },
+  "core_pmos_PMOS_Core": {
+    "device_info": {
+      "name": "PMOS Core",
+      "type": "mos_transistor",
+      "category": "core",
+      "subcategory": "pmos",
+      "description": "core pmos, pmos_LL, pmos_ULL",
+      "source_sheet": "10HV SOA SYM ON-OFF"
+    },
+    "parameters": [
+      {
+        "name": "vhigh_ds_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 1.65,
+          "col_3": 1.885,
+          "col_4": 2.079
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 1.885,
+          "0.01": 2.079
+        },
+        "source_row": 23,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": 1.815,
+          "col_3": 2.0735,
+          "col_4": 2.9999999999999996
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 2.0735,
+          "0.01": 2.9999999999999996
+        },
+        "source_row": 24,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": 1.65,
+          "col_3": 1.8479999999999999,
+          "col_4": 1.9529999999999998
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 1.8479999999999999,
+          "0.01": 1.9529999999999998
+        },
+        "source_row": 25,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": -1.65,
+          "col_3": -1.8479999999999999,
+          "col_4": -1.9529999999999998
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -1.8479999999999999,
+          "0.01": -1.9529999999999998
+        },
+        "source_row": 26,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 3.3,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 12-17, changed column D to no-limit\nreduced vhigh_gb_on to match original definition one 1 core Vsb above Vdd, should not be based on higher 1% voltage allowance as before"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 27,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -1.9529999999999998,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 28-33, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 28,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 28-33, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 29,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -3.3,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 28-33, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 30,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 28-33, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 31,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": -3.3,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 28-33, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 32,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 5.6115,
+          "col_4": 5.773000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 5.6115,
+          "0.01": 5.773000000000001
+        },
+        "source_row": 39,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": 6.050000000000001,
+          "col_3": 6.172650000000001,
+          "col_4": 6.35
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.172650000000001,
+          "0.01": 6.35
+        },
+        "source_row": 40,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 6.646,
+          "col_4": 7.101000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.646,
+          "0.01": 7.101000000000001
+        },
+        "source_row": 41,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": -5.5,
+          "col_3": -6.646,
+          "col_4": -7.101000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -6.646,
+          "0.01": -7.101000000000001
+        },
+        "source_row": 42,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 7.101000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 43,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -7.101000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 44,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 45,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -8.0,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 46,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 47,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": -8.0,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 48,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 5.6370000000000005,
+          "col_4": 5.914000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 5.6370000000000005,
+          "0.01": 5.914000000000001
+        },
+        "source_row": 55,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": 6.050000000000001,
+          "col_3": 6.200700000000001,
+          "col_4": 6.505400000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.200700000000001,
+          "0.01": 6.505400000000001
+        },
+        "source_row": 56,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 6.595,
+          "col_4": 6.917
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.595,
+          "0.01": 6.917
+        },
+        "source_row": 57,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": -5.5,
+          "col_3": -6.595,
+          "col_4": -6.917
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -6.595,
+          "0.01": -6.917
+        },
+        "source_row": 58,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 6.917,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 59,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -6.917,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 60,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 61,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -6.800000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 62,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 63,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": -6.800000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 64,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.1,
+      0.01,
+      0.0
+    ],
+    "rule_count": 30
+  },
+  "5v_nmos_NMOS_5V": {
+    "device_info": {
+      "name": "NMOS 5V",
+      "type": "mos_transistor",
+      "category": "5v",
+      "subcategory": "nmos",
+      "description": "nmos5",
+      "source_sheet": "10HV SOA SYM ON-OFF"
+    },
+    "parameters": [
+      {
+        "name": "vhigh_ds_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 5.6115,
+          "col_4": 5.773000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 5.6115,
+          "0.01": 5.773000000000001
+        },
+        "source_row": 39,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": 6.050000000000001,
+          "col_3": 6.172650000000001,
+          "col_4": 6.35
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.172650000000001,
+          "0.01": 6.35
+        },
+        "source_row": 40,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 6.646,
+          "col_4": 7.101000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.646,
+          "0.01": 7.101000000000001
+        },
+        "source_row": 41,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": -5.5,
+          "col_3": -6.646,
+          "col_4": -7.101000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -6.646,
+          "0.01": -7.101000000000001
+        },
+        "source_row": 42,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 7.101000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 43,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -7.101000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 44,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 45,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -8.0,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 46,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 47,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": -8.0,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 44-49, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 48,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 5.6370000000000005,
+          "col_4": 5.914000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 5.6370000000000005,
+          "0.01": 5.914000000000001
+        },
+        "source_row": 55,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": 6.050000000000001,
+          "col_3": 6.200700000000001,
+          "col_4": 6.505400000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.200700000000001,
+          "0.01": 6.505400000000001
+        },
+        "source_row": 56,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 6.595,
+          "col_4": 6.917
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.595,
+          "0.01": 6.917
+        },
+        "source_row": 57,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": -5.5,
+          "col_3": -6.595,
+          "col_4": -6.917
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -6.595,
+          "0.01": -6.917
+        },
+        "source_row": 58,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 6.917,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 59,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -6.917,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 60,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 61,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -6.800000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 62,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 63,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": -6.800000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 64,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.1,
+      0.01,
+      0.0
+    ],
+    "rule_count": 20
+  },
+  "5v_pmos_PMOS_5V": {
+    "device_info": {
+      "name": "PMOS 5V",
+      "type": "mos_transistor",
+      "category": "5v",
+      "subcategory": "pmos",
+      "description": "pmos5",
+      "source_sheet": "10HV SOA SYM ON-OFF"
+    },
+    "parameters": [
+      {
+        "name": "vhigh_ds_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 5.6370000000000005,
+          "col_4": 5.914000000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 5.6370000000000005,
+          "0.01": 5.914000000000001
+        },
+        "source_row": 55,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_ds_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": 6.050000000000001,
+          "col_3": 6.200700000000001,
+          "col_4": 6.505400000000001
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.200700000000001,
+          "0.01": 6.505400000000001
+        },
+        "source_row": 56,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 6.595,
+          "col_4": 6.917
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.595,
+          "0.01": 6.917
+        },
+        "source_row": 57,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gc",
+        "severity": "high",
+        "constraints": {
+          "col_2": -5.5,
+          "col_3": -6.595,
+          "col_4": -6.917
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -6.595,
+          "0.01": -6.917
+        },
+        "source_row": 58,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vhigh_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": 6.917,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 59,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vlow_gb_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -6.917,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 60,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 61,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_on",
+        "severity": "high",
+        "constraints": {
+          "col_2": -6.800000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 62,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vfwd_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": "no-limit",
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 63,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      },
+      {
+        "name": "vrev_jun_off",
+        "severity": "high",
+        "constraints": {
+          "col_2": -6.800000000000001,
+          "col_3": "no-limit",
+          "col_4": "no-limit",
+          "col_6": "moved values from column D to column B , no additional operating margin intended for rows 60-65, changed column D to no-limit, removed fwd junc limit on MOS for now (limit needs work in future rev)"
+        },
+        "tmaxfrac_constraints": {
+          "0.1": "no-limit",
+          "0.01": "no-limit"
+        },
+        "source_row": 64,
+        "source_sheet": "10HV SOA SYM ON-OFF"
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.1,
+      0.01,
+      0.0
+    ],
+    "rule_count": 10
+  },
+  "general_all_types_All_Capacitors": {
+    "device_info": {
+      "name": "All Capacitors",
+      "type": "capacitor",
+      "category": "general",
+      "subcategory": "all_types",
+      "description": "CGLV, CGHV, CGHVF, CGHVm13, CDP, CDPF, CDPFm13, CFRLV, CFRLVm13, CFR45, CFR45m13, CFR90, CFR90m13, CFR120, CFR120m13",
+      "source_sheet": "10HV SOA CAPS"
+    },
+    "parameters": [
+      {
+        "name": "vhigh_tnw",
+        "severity": "high",
+        "constraints": {
+          "col_2": 1.65,
+          "col_3": 1.8479999999999999,
+          "col_4": 1.9529999999999998
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 1.8479999999999999,
+          "0.01": 1.9529999999999998
+        },
+        "source_row": 8,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vlow_tnw",
+        "severity": "high",
+        "constraints": {
+          "col_2": -1.65,
+          "col_3": -1.8479999999999999,
+          "col_4": -1.9529999999999998
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -1.8479999999999999,
+          "0.01": -1.9529999999999998
+        },
+        "source_row": 9,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "CGHV, CGHVF, CGHVm13",
+        "severity": "",
+        "constraints": {
+          "col_6": "m13 = means m1 to m3"
+        },
+        "tmaxfrac_constraints": {},
+        "source_row": 11,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vhigh_tnw",
+        "severity": "high",
+        "constraints": {
+          "col_2": 5.5,
+          "col_3": 6.595,
+          "col_4": 6.917
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 6.595,
+          "0.01": 6.917
+        },
+        "source_row": 12,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vlow_tnw",
+        "severity": "high",
+        "constraints": {
+          "col_2": -5.5,
+          "col_3": -6.595,
+          "col_4": -6.917
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -6.595,
+          "0.01": -6.917
+        },
+        "source_row": 13,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vhigh_tb",
+        "severity": "high",
+        "constraints": {
+          "col_2": 7.0,
+          "col_3": 7.606999999999999,
+          "col_4": 8.691
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 7.606999999999999,
+          "0.01": 8.691
+        },
+        "source_row": 16,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vlow_tb",
+        "severity": "high",
+        "constraints": {
+          "col_2": -7.0,
+          "col_3": -7.606999999999999,
+          "col_4": -8.691
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -7.606999999999999,
+          "0.01": -8.691
+        },
+        "source_row": 17,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vhigh_tb",
+        "severity": "high",
+        "constraints": {
+          "col_2": 15.0,
+          "col_3": 17.11,
+          "col_4": 19.723
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 17.11,
+          "0.01": 19.723
+        },
+        "source_row": 20,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vlow_tb",
+        "severity": "high",
+        "constraints": {
+          "col_2": -15.0,
+          "col_3": -17.11,
+          "col_4": -19.723
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -17.11,
+          "0.01": -19.723
+        },
+        "source_row": 21,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vhigh_tb",
+        "severity": "high",
+        "constraints": {
+          "col_2": 45.0,
+          "col_3": 50.767,
+          "col_4": 55.089
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 50.767,
+          "0.01": 55.089
+        },
+        "source_row": 24,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vlow_tb",
+        "severity": "high",
+        "constraints": {
+          "col_2": -45.0,
+          "col_3": -50.767,
+          "col_4": -55.089
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -50.767,
+          "0.01": -55.089
+        },
+        "source_row": 25,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vhigh_tb",
+        "severity": "high",
+        "constraints": {
+          "col_2": 90.0,
+          "col_3": 95.0,
+          "col_4": 100.0
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 95.0,
+          "0.01": 100.0
+        },
+        "source_row": 28,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vlow_tb",
+        "severity": "high",
+        "constraints": {
+          "col_2": -90.0,
+          "col_3": -95.0,
+          "col_4": -100.0
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -95.0,
+          "0.01": -100.0
+        },
+        "source_row": 29,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vhigh_tb",
+        "severity": "high",
+        "constraints": {
+          "col_2": 120.0,
+          "col_3": 125.0,
+          "col_4": 130.0
+        },
+        "tmaxfrac_constraints": {
+          "0.1": 125.0,
+          "0.01": 130.0
+        },
+        "source_row": 32,
+        "source_sheet": "10HV SOA CAPS"
+      },
+      {
+        "name": "vlow_tb",
+        "severity": "high",
+        "constraints": {
+          "col_2": -120.0,
+          "col_3": -125.0,
+          "col_4": -130.0
+        },
+        "tmaxfrac_constraints": {
+          "0.1": -125.0,
+          "0.01": -130.0
+        },
+        "source_row": 33,
+        "source_sheet": "10HV SOA CAPS"
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.1,
+      0.01,
+      0.0
+    ],
+    "rule_count": 15
+  },
+  "well_isolation_Substrate_Well": {
+    "device_info": {
+      "name": "Substrate Well",
+      "type": "substrate",
+      "category": "well",
+      "subcategory": "isolation",
+      "description": "100V/70V substrate rules for all sym devices, caps, diodes",
+      "source_sheet": "10HV SOA SUB Well "
+    },
+    "parameters": [
+      {
+        "name": " v[d]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 11,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": " v[s]-v[sub]",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 12,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": " v[b]-v[sub]",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 13,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": " v[d]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 16,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": " v[s]-v[sub]",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 17,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": " v[b]-v[sub]",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 18,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "v[nw]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 21,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "v[t]-v[well] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 27,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "v[b]-v[well] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 28,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "(v[b]-v[nw]) ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -45.0,
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -45.0
+        },
+        "source_row": 32,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "v[n]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0,
+          "col_6": "Same as DRM for pfet Vbsub: Vb=n  (NHV)"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 37,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "dnfet ",
+        "severity": "",
+        "constraints": {
+          "col_6": "Same as DRM for nfet drain=n, body=p or source (PHV)"
+        },
+        "tmaxfrac_constraints": {},
+        "source_row": 39,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "v[n]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 40,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "v[sub]-v[p] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": "no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 41,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "v[n]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 120.0,
+          "col_6": "modelling accepted rewrite, updated (not symm checking different node sso use no-limit)"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 43,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "v[sub]-v[p] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -40.0,
+          "col_4": "no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -40.0
+        },
+        "source_row": 44,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "v[n]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 46,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "v[sub]-v[p] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -42.0,
+          "col_4": "no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -42.0
+        },
+        "source_row": 47,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "v[n]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 52,
+        "source_sheet": "10HV SOA SUB Well "
+      },
+      {
+        "name": "v[p]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 55,
+        "source_sheet": "10HV SOA SUB Well "
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.0
+    ],
+    "rule_count": 20
+  },
+  "reliability_drift_Oxide_Reliability": {
+    "device_info": {
+      "name": "Oxide Reliability",
+      "type": "oxide",
+      "category": "reliability",
+      "subcategory": "drift",
+      "description": "OxideRisk for design: sym devices, gate caps, CDP",
+      "source_sheet": "10HV SOA OXRisk Drift "
+    },
+    "parameters": [
+      {
+        "name": "nmos, nmos_LL, nmos_ULL, pmos, pmos_LL, pmos_ULL",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 9,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[b]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -1.32,
+          "col_4": 1.32
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -1.32
+        },
+        "source_row": 10,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[s]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -1.32,
+          "col_4": 1.32
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -1.32
+        },
+        "source_row": 11,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -1.32,
+          "col_4": 1.32
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -1.32
+        },
+        "source_row": 12,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "nmos5, pmos5",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 15,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[b]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -4.4,
+          "col_4": 4.4
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -4.4
+        },
+        "source_row": 16,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[s]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -4.4,
+          "col_4": 4.4
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -4.4
+        },
+        "source_row": 17,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -4.4,
+          "col_4": 4.4
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -4.4
+        },
+        "source_row": 18,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "CGLV",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 21,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[t]-V[nw]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -1.32,
+          "col_4": 1.32
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -1.32
+        },
+        "source_row": 22,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[t]-V[nw]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -4.4,
+          "col_4": 4.4
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -4.4
+        },
+        "source_row": 24,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[t]-V[b]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -5.6,
+          "col_4": 5.6
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -5.6
+        },
+        "source_row": 26,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "nmos_ana",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 30,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[b]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -1.32,
+          "col_4": 1.32
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -1.32
+        },
+        "source_row": 31,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[s]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -2.4,
+          "col_4": 1.32
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -2.4
+        },
+        "source_row": 32,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -2.4,
+          "col_4": 1.32
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -2.4
+        },
+        "source_row": 33,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "pmos_ana",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 36,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[b]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -1.32,
+          "col_4": 1.32
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -1.32
+        },
+        "source_row": 37,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[s]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -1.32,
+          "col_4": 2.4
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -1.32
+        },
+        "source_row": 38,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -1.32,
+          "col_4": 2.4
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -1.32
+        },
+        "source_row": 39,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "nmos3_zvt",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 41,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[b]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -1.32,
+          "col_4": 1.32
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -1.32
+        },
+        "source_row": 42,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[s]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -1.32,
+          "col_4": 1.32
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -1.32
+        },
+        "source_row": 43,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -2.4,
+          "col_4": 2.4
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -2.4
+        },
+        "source_row": 44,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "nmos10, nmos45b, nmos90b, pmos10, pmos45b, pmoshs45b, pmos90b",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 47,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[b]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -4.4,
+          "col_4": 4.4
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -4.4
+        },
+        "source_row": 48,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[s]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -4.4,
+          "col_4": 4.4
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -4.4
+        },
+        "source_row": 52,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": -4.4,
+          "col_4": 4.4
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -4.4
+        },
+        "source_row": 54,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 4.4
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 56,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[d]-V[g]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 4.4
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 58,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[d]-V[g]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 8.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 60,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[d]-V[g]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 24.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 62,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 24.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 64,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[d]-V[g]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 36.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 66,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[d]-V[g]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 52.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 68,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 52.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 70,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[d]-V[g]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 72.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 72,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[d]-V[g]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 80.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 74,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[d]-V[g]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 96.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 76,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 8.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 78,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 24.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 80,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 36.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 82,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 52.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 84,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 72.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 86,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 80.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 88,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      },
+      {
+        "name": "V[g]-V[d]",
+        "severity": "review",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 96.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 90,
+        "source_sheet": "10HV SOA OXRisk Drift "
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.0
+    ],
+    "rule_count": 46
+  },
+  "well_high_voltage_Substrate_HV": {
+    "device_info": {
+      "name": "Substrate HV",
+      "type": "substrate",
+      "category": "well",
+      "subcategory": "high_voltage",
+      "description": "100V/40V substrate rules",
+      "source_sheet": "10HV SOA SUB Well HV "
+    },
+    "parameters": [
+      {
+        "name": "v[sub]-v[s] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": "no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 13,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "v[sub]-v[s] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -38.0,
+          "col_4": "no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -38.0
+        },
+        "source_row": 16,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "v[sub]-v[s] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -42.0,
+          "col_4": "no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -42.0
+        },
+        "source_row": 19,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "v[sub]-v[s] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -30.0,
+          "col_4": "no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -30.0
+        },
+        "source_row": 22,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "v[s]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 25,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "v[d]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 28,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "v[sub]-v[b] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": "no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 31,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "v[sub]-v[b] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -30.0,
+          "col_4": "no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -30.0
+        },
+        "source_row": 34,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "v[sub]-v[b] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 37,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "v[b]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 40,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "v[sub]-v[d] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": "no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 43,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "v[sub]-v[d] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 70.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 46,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[b]-v[sub]) > 45 && ng/2-floor(ng/2) > 0",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 49,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[b]-v[sub]) > 90 && ng/2-floor(ng/2) = 0 && gt_90v == 0",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 90.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 50,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[b]-v[sub]) > 120 && ng/2-floor(ng/2) = 0 && gt_90v == 1",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 51,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[s]-v[sub]) > 90 && gt_90v == 0",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 90.0,
+          "col_5": "x"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 54,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[s]-v[sub]) > 120 && gt_90v == 1",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0,
+          "col_5": "x"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 55,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "v[s]-v[sub] ",
+        "severity": "",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 58,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "nmos120_maxHSV, combinational rules?? ",
+        "severity": "",
+        "constraints": {
+          "col_6": "? How to write"
+        },
+        "tmaxfrac_constraints": {},
+        "source_row": 61,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "< v[g]- v[sub] < 100 && (v[d]-v[sub]) > 115.0",
+        "severity": "high",
+        "constraints": {
+          "col_3": "?",
+          "col_4": "?",
+          "col_6": "new high side limits for nmos120, need to determine how to write up for final implementation? --------->>>"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "?"
+        },
+        "source_row": 62,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "< v[s]- v[sub] < 100 && (v[d]-v[sub]) > 115.0",
+        "severity": "high",
+        "constraints": {
+          "col_3": "?",
+          "col_4": "?",
+          "col_6": "new high side limits for nmos120, need to determine how to write up for final implementation? --------->>>"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "?"
+        },
+        "source_row": 63,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "< v[b]- v[sub] < 100 && (v[d]-v[sub]) > 115.0",
+        "severity": "high",
+        "constraints": {
+          "col_3": "?",
+          "col_4": "?",
+          "col_6": "new high side limits for nmos120, need to determine how to write up for final implementation? --------->>>"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "?"
+        },
+        "source_row": 64,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "VMS metal_net checks",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 68,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -15.0,
+          "col_4": 15.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -15.0
+        },
+        "source_row": 70,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -45.0,
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -45.0
+        },
+        "source_row": 72,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -30.0,
+          "col_4": 30.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -30.0
+        },
+        "source_row": 74,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -60.0,
+          "col_4": 60.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -60.0
+        },
+        "source_row": 76,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -105.0,
+          "col_4": 105.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -105.0
+        },
+        "source_row": 78,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -115.0,
+          "col_4": 115.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -115.0
+        },
+        "source_row": 80,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -165.0,
+          "col_4": 165.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -165.0
+        },
+        "source_row": 82,
+        "source_sheet": "10HV SOA SUB Well HV "
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.0
+    ],
+    "rule_count": 30
+  },
+  "well_high_voltage_additional_Substrate_HV_Additional": {
+    "device_info": {
+      "name": "Substrate HV Additional",
+      "type": "substrate",
+      "category": "well",
+      "subcategory": "high_voltage_additional",
+      "description": "Additional HV substrate rules",
+      "source_sheet": "10HV SOA SUB Well HV "
+    },
+    "parameters": [
+      {
+        "name": "VMS metal_net checks",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 68,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -15.0,
+          "col_4": 15.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -15.0
+        },
+        "source_row": 70,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -45.0,
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -45.0
+        },
+        "source_row": 72,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -30.0,
+          "col_4": 30.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -30.0
+        },
+        "source_row": 74,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -60.0,
+          "col_4": 60.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -60.0
+        },
+        "source_row": 76,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -105.0,
+          "col_4": 105.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -105.0
+        },
+        "source_row": 78,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -115.0,
+          "col_4": 115.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -115.0
+        },
+        "source_row": 80,
+        "source_sheet": "10HV SOA SUB Well HV "
+      },
+      {
+        "name": "(v[d]-v[s]) ",
+        "severity": "review",
+        "constraints": {
+          "col_3": -165.0,
+          "col_4": 165.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -165.0
+        },
+        "source_row": 82,
+        "source_sheet": "10HV SOA SUB Well HV "
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.0
+    ],
+    "rule_count": 8
+  },
+  "general_forward_reverse_Diodes": {
+    "device_info": {
+      "name": "Diodes",
+      "type": "diode",
+      "category": "general",
+      "subcategory": "forward_reverse",
+      "description": "Diode REV and FWD limits",
+      "source_sheet": "10HV Diodes FWD-REV"
+    },
+    "parameters": [
+      {
+        "name": "dz5, dz5b",
+        "severity": "review",
+        "constraints": {
+          "col_3": 5.8,
+          "col_4": " 0.9943V - (0.0006*(T-25))"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": 5.8
+        },
+        "source_row": 9,
+        "source_sheet": "10HV Diodes FWD-REV"
+      },
+      {
+        "name": "drsf45b",
+        "severity": "review",
+        "constraints": {
+          "col_3": 45.0,
+          "col_4": " 0.9943V - (0.0006*(T-25))"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": 45.0
+        },
+        "source_row": 10,
+        "source_sheet": "10HV Diodes FWD-REV"
+      },
+      {
+        "name": "drsf90b",
+        "severity": "review",
+        "constraints": {
+          "col_3": "min(90, 90+V[p]-v[sub])",
+          "col_4": " 0.9943V - (0.0006*(T-25))"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "min(90, 90+V[p]-v[sub])"
+        },
+        "source_row": 11,
+        "source_sheet": "10HV Diodes FWD-REV"
+      },
+      {
+        "name": "dnplus, dpplus, dpldd",
+        "severity": "review",
+        "constraints": {
+          "col_3": 6.0,
+          "col_4": " 0.9943V - (0.0006*(T-25))"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": 6.0
+        },
+        "source_row": 12,
+        "source_sheet": "10HV Diodes FWD-REV"
+      },
+      {
+        "name": "dnfet",
+        "severity": "review",
+        "constraints": {
+          "col_3": 8.0,
+          "col_4": " 0.9943V - (0.0006*(T-25))"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": 8.0
+        },
+        "source_row": 13,
+        "source_sheet": "10HV Diodes FWD-REV"
+      },
+      {
+        "name": "dpfet",
+        "severity": "review",
+        "constraints": {
+          "col_3": 8.5,
+          "col_4": " 0.9943V - (0.0006*(T-25))"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": 8.5
+        },
+        "source_row": 14,
+        "source_sheet": "10HV Diodes FWD-REV"
+      },
+      {
+        "name": "MISC ISO-Caps",
+        "severity": "",
+        "constraints": {
+          "col_3": "Vrev:  (v[n]-v[p]",
+          "col_4": "Vfwd:  v[p]-v[n]"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "Vrev:  (v[n]-v[p]"
+        },
+        "source_row": 17,
+        "source_sheet": "10HV Diodes FWD-REV"
+      },
+      {
+        "name": "clgo",
+        "severity": "review",
+        "constraints": {
+          "col_3": 10.0,
+          "col_4": 0.6
+        },
+        "tmaxfrac_constraints": {
+          "0.0": 10.0
+        },
+        "source_row": 18,
+        "source_sheet": "10HV Diodes FWD-REV"
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.0
+    ],
+    "rule_count": 8
+  },
+  "npn_general_BJT_NPN": {
+    "device_info": {
+      "name": "BJT NPN",
+      "type": "bjt",
+      "category": "npn",
+      "subcategory": "general",
+      "description": "npn_b",
+      "source_sheet": "10HV BJT REV "
+    },
+    "parameters": [
+      {
+        "name": "BJT drift (design sensitivity, device intance parameter)",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 7,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "V[e]-V[b]: drift0 (default)",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 10.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 9,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "V[e]-V[b]: drift1",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 6.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 10,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "V[b]-V[e]:drift0 (default)",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 17.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 13,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "V[b]-V[e]:drift1",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 12.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 14,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[c]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 22,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[e]-v[sub]",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 25,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[sub]-v[c]",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": "no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 26,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "Reverse Rules (as-is, no change)",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 30,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[c]-v[b]",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 32,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[c]-v[e] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 20.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 33,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[b]-v[c] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 36,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[e]-v[c] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 37,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "(v[b]-v[e]) >= 2.0 && (v[b]-v[c] < 3.0)",
+        "severity": "high",
+        "constraints": {
+          "col_3": "?",
+          "col_4": "?"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "?"
+        },
+        "source_row": 38,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[iso]-v[c]",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 41,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "abs(v[iso]-v[b]) ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -0.2,
+          "col_4": 0.2
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -0.2
+        },
+        "source_row": 42,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "fwd",
+        "severity": "",
+        "constraints": {
+          "col_3": 0.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": 0.0
+        },
+        "source_row": 44,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "V[e]-V[iso]",
+        "severity": "high",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 46,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "x <=6.54",
+        "severity": "",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": " (-0.002269*Temp_degC + 0.695428)",
+          "col_6": "removed reverse rule for vlow flag, rule applicable for forward bias limits"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 48,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "6.54<x =< 11.85",
+        "severity": "",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": " (-0.002468*Temp_degC + 0.669367)",
+          "col_6": "V[iso]-V[e]), rev"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 49,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "x  >11.85",
+        "severity": "",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": " (-0.002653*Temp_degC + 0.620257)",
+          "col_6": "V[e]-V[Iso], fwd"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 50,
+        "source_sheet": "10HV BJT REV "
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.0
+    ],
+    "rule_count": 21
+  },
+  "pnp_general_BJT_PNP": {
+    "device_info": {
+      "name": "BJT PNP",
+      "type": "bjt",
+      "category": "pnp",
+      "subcategory": "general",
+      "description": "pnp, pnp_iso",
+      "source_sheet": "10HV BJT REV "
+    },
+    "parameters": [
+      {
+        "name": "v[c]-v[sub] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 22,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[e]-v[sub]",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 120.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 25,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[sub]-v[c]",
+        "severity": "high",
+        "constraints": {
+          "col_3": -70.0,
+          "col_4": "no-limit"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -70.0
+        },
+        "source_row": 26,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "Reverse Rules (as-is, no change)",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 30,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[c]-v[b]",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 32,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[c]-v[e] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 20.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 33,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[b]-v[c] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 36,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[e]-v[c] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 37,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "(v[b]-v[e]) >= 2.0 && (v[b]-v[c] < 3.0)",
+        "severity": "high",
+        "constraints": {
+          "col_3": "?",
+          "col_4": "?"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "?"
+        },
+        "source_row": 38,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[iso]-v[c]",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 41,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "abs(v[iso]-v[b]) ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -0.2,
+          "col_4": 0.2
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -0.2
+        },
+        "source_row": 42,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "fwd",
+        "severity": "",
+        "constraints": {
+          "col_3": 0.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": 0.0
+        },
+        "source_row": 44,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "V[e]-V[iso]",
+        "severity": "high",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 46,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "x <=6.54",
+        "severity": "",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": " (-0.002269*Temp_degC + 0.695428)",
+          "col_6": "removed reverse rule for vlow flag, rule applicable for forward bias limits"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 48,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "6.54<x =< 11.85",
+        "severity": "",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": " (-0.002468*Temp_degC + 0.669367)",
+          "col_6": "V[iso]-V[e]), rev"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 49,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "x  >11.85",
+        "severity": "",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": " (-0.002653*Temp_degC + 0.620257)",
+          "col_6": "V[e]-V[Iso], fwd"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 50,
+        "source_sheet": "10HV BJT REV "
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.0
+    ],
+    "rule_count": 16
+  },
+  "pnp_isolated_BJT_PNP_ISO": {
+    "device_info": {
+      "name": "BJT PNP ISO",
+      "type": "bjt",
+      "category": "pnp",
+      "subcategory": "isolated",
+      "description": "pnp_iso special limits",
+      "source_sheet": "10HV BJT REV "
+    },
+    "parameters": [
+      {
+        "name": "Reverse Rules (as-is, no change)",
+        "severity": "",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 30,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[c]-v[b]",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 32,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[c]-v[e] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 20.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 33,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[b]-v[c] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 36,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[e]-v[c] ",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 37,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "(v[b]-v[e]) >= 2.0 && (v[b]-v[c] < 3.0)",
+        "severity": "high",
+        "constraints": {
+          "col_3": "?",
+          "col_4": "?"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "?"
+        },
+        "source_row": 38,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "v[iso]-v[c]",
+        "severity": "high",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": 45.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 41,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "abs(v[iso]-v[b]) ",
+        "severity": "high",
+        "constraints": {
+          "col_3": -0.2,
+          "col_4": 0.2
+        },
+        "tmaxfrac_constraints": {
+          "0.0": -0.2
+        },
+        "source_row": 42,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "fwd",
+        "severity": "",
+        "constraints": {
+          "col_3": 0.0
+        },
+        "tmaxfrac_constraints": {
+          "0.0": 0.0
+        },
+        "source_row": 44,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "V[e]-V[iso]",
+        "severity": "high",
+        "constraints": {
+          "col_3": "vlow",
+          "col_4": "vhigh"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "vlow"
+        },
+        "source_row": 46,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "x <=6.54",
+        "severity": "",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": " (-0.002269*Temp_degC + 0.695428)",
+          "col_6": "removed reverse rule for vlow flag, rule applicable for forward bias limits"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 48,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "6.54<x =< 11.85",
+        "severity": "",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": " (-0.002468*Temp_degC + 0.669367)",
+          "col_6": "V[iso]-V[e]), rev"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 49,
+        "source_sheet": "10HV BJT REV "
+      },
+      {
+        "name": "x  >11.85",
+        "severity": "",
+        "constraints": {
+          "col_3": "no-limit",
+          "col_4": " (-0.002653*Temp_degC + 0.620257)",
+          "col_6": "V[e]-V[Iso], fwd"
+        },
+        "tmaxfrac_constraints": {
+          "0.0": "no-limit"
+        },
+        "source_row": 50,
+        "source_sheet": "10HV BJT REV "
+      }
+    ],
+    "tmaxfrac_levels": [
+      0.0
+    ],
+    "rule_count": 13
+  }
+}

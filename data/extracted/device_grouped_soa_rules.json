@@ -1,0 +1,532 @@
+{
+  "soa_device_rules": {
+    "version": "2.0",
+    "technology": "smos10hv",
+    "description": "SOA rules organized by device types",
+    "extraction_info": {
+      "total_devices": 4,
+      "total_parameters": 104,
+      "extraction_date": "2025-09-15"
+    },
+    "devices": {
+      "mos_transistor_core_nmos": {
+        "device_info": {
+          "name": "NMOS Core",
+          "type": "mos_transistor",
+          "category": "core",
+          "subcategory": "nmos",
+          "description": "core nmos, nmos_LL, nmos_ULL  (nmos_ULL no model avail, assume same values hold for now)",
+          "source_sheet": "10HV SOA SYM ON-OFF",
+          "technology": "smos10hv"
+        },
+        "rule_count": 40,
+        "tmaxfrac_levels": [
+          0.1,
+          0.01,
+          0.0
+        ],
+        "parameters": {
+          "vhigh_ds_on": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_ds_on",
+            "tmaxfrac_constraints": {
+              "0.1": 5.5,
+              "0.01": 5.6370000000000005,
+              "0.0": 5.914000000000001
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 55"
+          },
+          "vhigh_ds_off": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_ds_off",
+            "tmaxfrac_constraints": {
+              "0.1": 6.050000000000001,
+              "0.01": 6.200700000000001,
+              "0.0": 6.505400000000001
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 56"
+          },
+          "vhigh_gc": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_gc",
+            "tmaxfrac_constraints": {
+              "0.1": 5.5,
+              "0.01": 6.595,
+              "0.0": 6.917
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 57"
+          },
+          "vlow_gc": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vlow_gc",
+            "tmaxfrac_constraints": {
+              "0.1": -5.5,
+              "0.01": -6.595,
+              "0.0": -6.917
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 58"
+          },
+          "vhigh_gb_on": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_gb_on",
+            "tmaxfrac_constraints": {
+              "0.1": 6.917,
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 59"
+          },
+          "vlow_gb_on": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vlow_gb_on",
+            "tmaxfrac_constraints": {
+              "0.1": -6.917,
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 60"
+          },
+          "vfwd_jun_on": {
+            "severity": "high",
+            "type": "general",
+            "unit": "V",
+            "description": "high severity limit for vfwd_jun_on",
+            "tmaxfrac_constraints": {
+              "0.1": "no-limit",
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 61"
+          },
+          "vrev_jun_on": {
+            "severity": "high",
+            "type": "general",
+            "unit": "V",
+            "description": "high severity limit for vrev_jun_on",
+            "tmaxfrac_constraints": {
+              "0.1": -6.800000000000001,
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 62"
+          },
+          "vfwd_jun_off": {
+            "severity": "high",
+            "type": "general",
+            "unit": "V",
+            "description": "high severity limit for vfwd_jun_off",
+            "tmaxfrac_constraints": {
+              "0.1": "no-limit",
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 63"
+          },
+          "vrev_jun_off": {
+            "severity": "high",
+            "type": "general",
+            "unit": "V",
+            "description": "high severity limit for vrev_jun_off",
+            "tmaxfrac_constraints": {
+              "0.1": -6.800000000000001,
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 64"
+          }
+        }
+      },
+      "mos_transistor_core_pmos": {
+        "device_info": {
+          "name": "PMOS Core",
+          "type": "mos_transistor",
+          "category": "core",
+          "subcategory": "pmos",
+          "description": "core pmos, pmos_LL, pmos_ULL  (pmos_ULL no model avail, assume same values hold for now)",
+          "source_sheet": "10HV SOA SYM ON-OFF",
+          "technology": "smos10hv"
+        },
+        "rule_count": 30,
+        "tmaxfrac_levels": [
+          0.1,
+          0.01,
+          0.0
+        ],
+        "parameters": {
+          "vhigh_ds_on": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_ds_on",
+            "tmaxfrac_constraints": {
+              "0.1": 5.5,
+              "0.01": 5.6370000000000005,
+              "0.0": 5.914000000000001
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 55"
+          },
+          "vhigh_ds_off": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_ds_off",
+            "tmaxfrac_constraints": {
+              "0.1": 6.050000000000001,
+              "0.01": 6.200700000000001,
+              "0.0": 6.505400000000001
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 56"
+          },
+          "vhigh_gc": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_gc",
+            "tmaxfrac_constraints": {
+              "0.1": 5.5,
+              "0.01": 6.595,
+              "0.0": 6.917
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 57"
+          },
+          "vlow_gc": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vlow_gc",
+            "tmaxfrac_constraints": {
+              "0.1": -5.5,
+              "0.01": -6.595,
+              "0.0": -6.917
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 58"
+          },
+          "vhigh_gb_on": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_gb_on",
+            "tmaxfrac_constraints": {
+              "0.1": 6.917,
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 59"
+          },
+          "vlow_gb_on": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vlow_gb_on",
+            "tmaxfrac_constraints": {
+              "0.1": -6.917,
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 60"
+          },
+          "vfwd_jun_on": {
+            "severity": "high",
+            "type": "general",
+            "unit": "V",
+            "description": "high severity limit for vfwd_jun_on",
+            "tmaxfrac_constraints": {
+              "0.1": "no-limit",
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 61"
+          },
+          "vrev_jun_on": {
+            "severity": "high",
+            "type": "general",
+            "unit": "V",
+            "description": "high severity limit for vrev_jun_on",
+            "tmaxfrac_constraints": {
+              "0.1": -6.800000000000001,
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 62"
+          },
+          "vfwd_jun_off": {
+            "severity": "high",
+            "type": "general",
+            "unit": "V",
+            "description": "high severity limit for vfwd_jun_off",
+            "tmaxfrac_constraints": {
+              "0.1": "no-limit",
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 63"
+          },
+          "vrev_jun_off": {
+            "severity": "high",
+            "type": "general",
+            "unit": "V",
+            "description": "high severity limit for vrev_jun_off",
+            "tmaxfrac_constraints": {
+              "0.1": -6.800000000000001,
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 64"
+          }
+        }
+      },
+      "mos_transistor_5v_nmos": {
+        "device_info": {
+          "name": "NMOS 5V",
+          "type": "mos_transistor",
+          "category": "5v",
+          "subcategory": "nmos",
+          "description": "nmos5",
+          "source_sheet": "10HV SOA SYM ON-OFF",
+          "technology": "smos10hv"
+        },
+        "rule_count": 20,
+        "tmaxfrac_levels": [
+          0.1,
+          0.01,
+          0.0
+        ],
+        "parameters": {
+          "vhigh_ds_on": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_ds_on",
+            "tmaxfrac_constraints": {
+              "0.1": 5.5,
+              "0.01": 5.6370000000000005,
+              "0.0": 5.914000000000001
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 55"
+          },
+          "vhigh_ds_off": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_ds_off",
+            "tmaxfrac_constraints": {
+              "0.1": 6.050000000000001,
+              "0.01": 6.200700000000001,
+              "0.0": 6.505400000000001
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 56"
+          },
+          "vhigh_gc": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_gc",
+            "tmaxfrac_constraints": {
+              "0.1": 5.5,
+              "0.01": 6.595,
+              "0.0": 6.917
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 57"
+          },
+          "vlow_gc": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vlow_gc",
+            "tmaxfrac_constraints": {
+              "0.1": -5.5,
+              "0.01": -6.595,
+              "0.0": -6.917
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 58"
+          },
+          "vhigh_gb_on": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_gb_on",
+            "tmaxfrac_constraints": {
+              "0.1": 6.917,
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 59"
+          },
+          "vlow_gb_on": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vlow_gb_on",
+            "tmaxfrac_constraints": {
+              "0.1": -6.917,
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 60"
+          },
+          "vfwd_jun_on": {
+            "severity": "high",
+            "type": "general",
+            "unit": "V",
+            "description": "high severity limit for vfwd_jun_on",
+            "tmaxfrac_constraints": {
+              "0.1": "no-limit",
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 61"
+          },
+          "vrev_jun_on": {
+            "severity": "high",
+            "type": "general",
+            "unit": "V",
+            "description": "high severity limit for vrev_jun_on",
+            "tmaxfrac_constraints": {
+              "0.1": -6.800000000000001,
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 62"
+          },
+          "vfwd_jun_off": {
+            "severity": "high",
+            "type": "general",
+            "unit": "V",
+            "description": "high severity limit for vfwd_jun_off",
+            "tmaxfrac_constraints": {
+              "0.1": "no-limit",
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 63"
+          },
+          "vrev_jun_off": {
+            "severity": "high",
+            "type": "general",
+            "unit": "V",
+            "description": "high severity limit for vrev_jun_off",
+            "tmaxfrac_constraints": {
+              "0.1": -6.800000000000001,
+              "0.01": "no-limit",
+              "0.0": "no-limit"
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 64"
+          }
+        }
+      },
+      "capacitor_gate_low_voltage": {
+        "device_info": {
+          "name": "CGLV Capacitor",
+          "type": "capacitor",
+          "category": "gate",
+          "subcategory": "low_voltage",
+          "description": "CGLV",
+          "source_sheet": "10HV SOA CAPS",
+          "technology": "smos10hv"
+        },
+        "rule_count": 14,
+        "tmaxfrac_levels": [
+          0.1,
+          0.01,
+          0.0
+        ],
+        "parameters": {
+          "vhigh_tnw": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_tnw",
+            "tmaxfrac_constraints": {
+              "0.1": 5.5,
+              "0.01": 6.595,
+              "0.0": 6.917
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 12"
+          },
+          "vlow_tnw": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vlow_tnw",
+            "tmaxfrac_constraints": {
+              "0.1": -5.5,
+              "0.01": -6.595,
+              "0.0": -6.917
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 13"
+          },
+          "vhigh_tb": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vhigh_tb",
+            "tmaxfrac_constraints": {
+              "0.1": 120.0,
+              "0.01": 125.0,
+              "0.0": 130.0
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 32"
+          },
+          "vlow_tb": {
+            "severity": "high",
+            "type": "voltage",
+            "unit": "V",
+            "description": "high severity limit for vlow_tb",
+            "tmaxfrac_constraints": {
+              "0.1": -120.0,
+              "0.01": -125.0,
+              "0.0": -130.0
+            },
+            "conditions": [],
+            "notes": "Extracted from tmaxfrac section at row 33"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "sheets": {
+    "    Versions    ": {
+      "tmaxfrac_sections": 0,
+      "device_identifiers": 3,
+      "parameter_blocks": 0,
+      "estimated_total_params": 0
+    },
+    "Device Summary by Method": {
+      "tmaxfrac_sections": 0,
+      "device_identifiers": 7,
+      "parameter_blocks": 0,
+      "estimated_total_params": 0
+    },
+    "10HV SOA SYM ON-OFF": {
+      "tmaxfrac_sections": 4,
+      "device_identifiers": 4,
+      "parameter_blocks": 4,
+      "estimated_total_params": 124
+    },
+    "10HV SOA CAPS": {
+      "tmaxfrac_sections": 1,
+      "device_identifiers": 8,
+      "parameter_blocks": 0,
+      "estimated_total_params": 14
+    },
+    "10HV SOA SUB Well ": {
+      "tmaxfrac_sections": 1,
+      "device_identifiers": 13,
+      "parameter_blocks": 0,
+      "estimated_total_params": 19
+    },
+    "10HV SOA OXRisk Drift ": {
+      "tmaxfrac_sections": 1,
+      "device_identifiers": 7,
+      "parameter_blocks": 0,
+      "estimated_total_params": 39
+    },
+    "10HV SOA SUB Well HV ": {
+      "tmaxfrac_sections": 2,
+      "device_identifiers": 2,
+      "parameter_blocks": 0,
+      "estimated_total_params": 32
+    },
+    "10HV HV ON ": {
+      "tmaxfrac_sections": 0,
+      "device_identifiers": 0,
+      "parameter_blocks": 0,
+      "estimated_total_params": 0
+    },
+    "10HV HCI-TDDB": {
+      "tmaxfrac_sections": 0,
+      "device_identifiers": 0,
+      "parameter_blocks": 0,
+      "estimated_total_params": 0
+    },
+    "10HV Diodes FWD-REV": {
+      "tmaxfrac_sections": 1,
+      "device_identifiers": 2,
+      "parameter_blocks": 0,
+      "estimated_total_params": 7
+    },
+    "Resistors": {
+      "tmaxfrac_sections": 0,
+      "device_identifiers": 5,
+      "parameter_blocks": 0,
+      "estimated_total_params": 0
+    },
+    "10HV BJT REV ": {
+      "tmaxfrac_sections": 3,
+      "device_identifiers": 12,
+      "parameter_blocks": 0,
+      "estimated_total_params": 34
+    },
+    "MOS Monitor vs Smoke": {
+      "tmaxfrac_sections": 0,
+      "device_identifiers": 5,
+      "parameter_blocks": 0,
+      "estimated_total_params": 0
+    }
+  },
+  "summary": {
+    "total_sheets": 13,
+    "sheets_with_tmaxfrac": 7,
+    "sheets_with_devices": 11,
+    "total_tmaxfrac_sections": 13,
+    "total_devices": 68,
+    "total_param_blocks": 4
+  }
+}

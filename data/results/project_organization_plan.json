@@ -1,0 +1,147 @@
+{
+  "directory_structure": {
+    "docs/": {
+      "description": "All documentation and reports",
+      "subdirs": {
+        "proposal/": "Business proposal and presentation materials",
+        "reports/": "Analysis reports and summaries",
+        "guides/": "User guides and technical documentation"
+      }
+    },
+    "src/": {
+      "description": "Source code organized by functionality",
+      "subdirs": {
+        "extraction/": "SOA rule extraction tools and parsers",
+        "dsl/": "DSL specification and implementation",
+        "validation/": "Validation and testing tools",
+        "automation/": "Automation and workflow tools"
+      }
+    },
+    "data/": {
+      "description": "All data files organized by type",
+      "subdirs": {
+        "source/": "Original Excel files and source data",
+        "extracted/": "Extracted SOA rules and processed data",
+        "mappings/": "Device mappings and pattern configurations",
+        "results/": "Final results and generated outputs"
+      }
+    },
+    "assets/": {
+      "description": "Visual assets and media files",
+      "subdirs": {
+        "charts/": "Generated charts and visualizations",
+        "diagrams/": "Architecture diagrams and flowcharts"
+      }
+    },
+    "tests/": {
+      "description": "Test files and test data",
+      "subdirs": {
+        "unit/": "Unit tests for individual components",
+        "integration/": "Integration tests for workflows",
+        "data/": "Test data and fixtures"
+      }
+    },
+    "scripts/": {
+      "description": "Utility scripts and automation",
+      "subdirs": {
+        "setup/": "Project setup and configuration scripts",
+        "analysis/": "One-off analysis and debugging scripts"
+      }
+    },
+    "config/": {
+      "description": "Configuration files and settings",
+      "subdirs": {}
+    },
+    "examples/": {
+      "description": "Example usage and demonstrations",
+      "subdirs": {
+        "dsl/": "DSL usage examples",
+        "extraction/": "Extraction workflow examples"
+      }
+    }
+  },
+  "file_mapping": {
+    "enhanced_extractor.py": "src/extraction/enhanced_extractor.py",
+    "improved_extraction_summary.txt": "docs/reports/improved_extraction_summary.txt",
+    "project_organization.py": "src/extraction/project_organization.py",
+    "complete_rule_extractor.py": "src/extraction/complete_rule_extractor.py",
+    "improved_tmaxfrac_extractor.py": "src/extraction/improved_tmaxfrac_extractor.py",
+    "DEVICE_GROUPED_EXTRACTION.md": "src/extraction/DEVICE_GROUPED_EXTRACTION.md",
+    "analyze_extraction_gap.py": "src/extraction/analyze_extraction_gap.py",
+    "enhanced_extraction_summary.txt": "docs/reports/enhanced_extraction_summary.txt",
+    "final_results_generator.py": "src/extraction/final_results_generator.py",
+    "device_grouped_extractor.py": "src/extraction/device_grouped_extractor.py",
+    "final_extraction_report.md": "docs/reports/final_extraction_report.md",
+    "identify_all_patterns.py": "src/extraction/identify_all_patterns.py",
+    "complete_extraction_log.txt": "data/results/complete_extraction_log.txt",
+    "analyze_excel.py": "src/extraction/analyze_excel.py",
+    "complete_extraction_audit.py": "src/extraction/complete_extraction_audit.py",
+    "extraction_summary.txt": "docs/reports/extraction_summary.txt",
+    "COMPLETE_EXTRACTION_REPORT.md": "docs/reports/COMPLETE_EXTRACTION_REPORT.md",
+    "excel_to_dsl_converter.py": "src/extraction/excel_to_dsl_converter.py",
+    "soa_rules.py": "src/extraction/soa_rules.py",
+    "simple_device_mapper.py": "src/extraction/simple_device_mapper.py",
+    "src/soa_rules/complete_rule_extractor.py": "src/extraction/complete_rule_extractor.py",
+    "src/soa_rules/loader.py": "src/extraction/loader.py",
+    "src/soa_rules/complete_extraction_audit.py": "src/extraction/complete_extraction_audit.py",
+    "soa_dsl_specification.py": "src/dsl/soa_dsl_specification.py",
+    "SOA_DSL_Presentation.md": "docs/proposal/SOA_DSL_Presentation.md",
+    "SOA_DSL_Proposal.md": "docs/proposal/SOA_DSL_Proposal.md",
+    "demo_soa_dsl.py": "src/dsl/demo_soa_dsl.py",
+    "soa_dsl_implementation.py": "src/dsl/soa_dsl_implementation.py",
+    "soa_dsl_specification.json": "data/results/soa_dsl_specification.json",
+    "tests/test_soa_dsl.py": "tests/unit/test_soa_dsl.py",
+    "src/soa_rules/demo_soa_dsl.py": "src/dsl/demo_soa_dsl.py",
+    "src/soa_rules/soa_dsl_implementation.py": "src/dsl/soa_dsl_implementation.py",
+    "workflow_analysis.py": "src/automation/workflow_analysis.py",
+    "automation_benefits_analysis.py": "src/automation/automation_benefits_analysis.py",
+    "workflow_analysis.json": "data/results/workflow_analysis.json",
+    "implementation_architecture.py": "src/automation/implementation_architecture.py",
+    "validation_summary.py": "scripts/analysis/validation_summary.py",
+    "detailed_analysis.py": "scripts/analysis/detailed_analysis.py",
+    "FINAL_SUMMARY.md": "docs/reports/FINAL_SUMMARY.md",
+    "precise_analysis.py": "scripts/analysis/precise_analysis.py",
+    "device_summary.txt": "docs/reports/device_summary.txt",
+    "corrected_tmaxfrac_analysis.py": "scripts/analysis/corrected_tmaxfrac_analysis.py",
+    "conversion_log.txt": "docs/reports/conversion_log.txt",
+    "src/soa_rules/validation_summary.py": "scripts/analysis/validation_summary.py",
+    "src/soa_rules/corrected_tmaxfrac_analysis.py": "scripts/analysis/corrected_tmaxfrac_analysis.py",
+    "complete_soa_rules.json": "data/extracted/complete_soa_rules.json",
+    "simple_device_mapping.json": "data/mappings/simple_device_mapping.json",
+    "improved_device_grouped_rules.json": "data/results/improved_device_grouped_rules.json",
+    "device_grouped_soa_rules.json": "data/extracted/device_grouped_soa_rules.json",
+    "soa_toolchain_architecture.json": "data/extracted/soa_toolchain_architecture.json",
+    "final_soa_device_rules.json": "data/results/final_soa_device_rules.json",
+    "pattern_mapping.json": "data/mappings/pattern_mapping.json",
+    "enhanced_device_grouped_rules.json": "data/results/enhanced_device_grouped_rules.json",
+    "soa_rules.json": "data/extracted/soa_rules.json",
+    "soa_automation_analysis.json": "data/extracted/soa_automation_analysis.json",
+    "test_single_sheet.py": "src/validation/test_single_sheet.py",
+    "soa_automation_comparison.png": "assets/charts/soa_automation_comparison.png",
+    "validation_comparison.py": "src/validation/validation_comparison.py",
+    "soa_roi_timeline.png": "assets/charts/soa_roi_timeline.png",
+    "SMOS10HV_SOA_Multi_PlusSmoke_Update_EngrRel_v3.17ER_06122025  2.xlsx": "data/source/SMOS10HV_SOA_Multi_PlusSmoke_Update_EngrRel_v3.17ER_06122025  2.xlsx",
+    "POETRY_SETUP.md": "docs/guides/POETRY_SETUP.md",
+    "tests/__init__.py": "tests/__init__.py",
+    "src/soa_rules/__init__.py": "src/soa_rules/__init__.py",
+    "README.md": "docs/README.md",
+    "debug_conversion.py": "scripts/analysis/debug_conversion.py"
+  },
+  "organization_steps": [
+    "1. Create new directory structure",
+    "2. Move files to appropriate locations",
+    "3. Update import statements and references",
+    "4. Create index files and documentation",
+    "5. Update README and project documentation",
+    "6. Clean up empty directories",
+    "7. Update configuration files"
+  ],
+  "benefits": [
+    "Clear separation of concerns",
+    "Easy navigation and file discovery",
+    "Logical grouping of related files",
+    "Scalable structure for future growth",
+    "Standard project layout conventions",
+    "Improved maintainability"
+  ]
+}

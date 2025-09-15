@@ -1,0 +1,241 @@
+Improved Device-Grouped SOA Rules Summary
+=============================================
+
+Extraction method: tmaxfrac sections only
+Total devices: 13
+Total parameters: 270
+
+
+MOS_TRANSISTOR_CORE_NMOS:
+  Name: NMOS Core
+  Type: mos_transistor
+  Category: core
+  Subcategory: nmos
+  Parameters: 40
+  tmaxfrac levels: [0.1, 0.01, 0.0]
+  Source: 10HV SOA SYM ON-OFF
+  Description: core nmos, nmos_LL, nmos_ULL
+  Sample parameters:
+    - vhigh_ds_on (voltage, V)
+      tmaxfrac constraints: {0.1: 1.71, 0.01: 1.8379999999999999}
+    - vhigh_ds_off (voltage, V)
+      tmaxfrac constraints: {0.1: 1.881, 0.01: 2.9999999999999996}
+    - vhigh_gc (voltage, V)
+      tmaxfrac constraints: {0.1: 1.969, 0.01: 2.073}
+    ... and 37 more
+
+MOS_TRANSISTOR_CORE_PMOS:
+  Name: PMOS Core
+  Type: mos_transistor
+  Category: core
+  Subcategory: pmos
+  Parameters: 30
+  tmaxfrac levels: [0.1, 0.01, 0.0]
+  Source: 10HV SOA SYM ON-OFF
+  Description: core pmos, pmos_LL, pmos_ULL
+  Sample parameters:
+    - vhigh_ds_on (voltage, V)
+      tmaxfrac constraints: {0.1: 1.885, 0.01: 2.079}
+    - vhigh_ds_off (voltage, V)
+      tmaxfrac constraints: {0.1: 2.0735, 0.01: 2.9999999999999996}
+    - vhigh_gc (voltage, V)
+      tmaxfrac constraints: {0.1: 1.8479999999999999, 0.01: 1.9529999999999998}
+    ... and 27 more
+
+MOS_TRANSISTOR_5V_NMOS:
+  Name: NMOS 5V
+  Type: mos_transistor
+  Category: 5v
+  Subcategory: nmos
+  Parameters: 20
+  tmaxfrac levels: [0.1, 0.01, 0.0]
+  Source: 10HV SOA SYM ON-OFF
+  Description: nmos5
+  Sample parameters:
+    - vhigh_ds_on (voltage, V)
+      tmaxfrac constraints: {0.1: 5.6115, 0.01: 5.773000000000001}
+    - vhigh_ds_off (voltage, V)
+      tmaxfrac constraints: {0.1: 6.172650000000001, 0.01: 6.35}
+    - vhigh_gc (voltage, V)
+      tmaxfrac constraints: {0.1: 6.646, 0.01: 7.101000000000001}
+    ... and 17 more
+
+MOS_TRANSISTOR_5V_PMOS:
+  Name: PMOS 5V
+  Type: mos_transistor
+  Category: 5v
+  Subcategory: pmos
+  Parameters: 10
+  tmaxfrac levels: [0.1, 0.01, 0.0]
+  Source: 10HV SOA SYM ON-OFF
+  Description: pmos5
+  Sample parameters:
+    - vhigh_ds_on (voltage, V)
+      tmaxfrac constraints: {0.1: 5.6370000000000005, 0.01: 5.914000000000001}
+    - vhigh_ds_off (voltage, V)
+      tmaxfrac constraints: {0.1: 6.200700000000001, 0.01: 6.505400000000001}
+    - vhigh_gc (voltage, V)
+      tmaxfrac constraints: {0.1: 6.595, 0.01: 6.917}
+    ... and 7 more
+
+CAPACITOR_GENERAL_ALL_TYPES:
+  Name: All Capacitors
+  Type: capacitor
+  Category: general
+  Subcategory: all_types
+  Parameters: 14
+  tmaxfrac levels: [0.1, 0.01, 0.0]
+  Source: 10HV SOA CAPS
+  Description: CGLV, CGHV, CGHVF, CGHVm13, CDP, CDPF, CDPFm13, CFRLV, CFRLVm13, CFR45, CFR45m13, CFR90, CFR90m13, CFR120, CFR120m13
+  Sample parameters:
+    - vhigh_tnw (voltage, V)
+      tmaxfrac constraints: {0.1: 1.8479999999999999, 0.01: 1.9529999999999998}
+    - vlow_tnw (voltage, V)
+      tmaxfrac constraints: {0.1: -1.8479999999999999, 0.01: -1.9529999999999998}
+    - vhigh_tnw (voltage, V)
+      tmaxfrac constraints: {0.1: 6.595, 0.01: 6.917}
+    ... and 11 more
+
+SUBSTRATE_WELL_ISOLATION:
+  Name: Substrate Well
+  Type: substrate
+  Category: well
+  Subcategory: isolation
+  Parameters: 19
+  tmaxfrac levels: [0.0]
+  Source: 10HV SOA SUB Well 
+  Description: 100V/70V substrate rules for all sym devices, caps, diodes
+  Sample parameters:
+    -  v[d]-v[sub]  (general, V)
+      tmaxfrac constraints: {0.0: -70.0}
+    -  v[s]-v[sub] (general, V)
+      tmaxfrac constraints: {0.0: -70.0}
+    -  v[b]-v[sub] (general, V)
+      tmaxfrac constraints: {0.0: -70.0}
+    ... and 16 more
+
+OXIDE_RELIABILITY_DRIFT:
+  Name: Oxide Reliability
+  Type: oxide
+  Category: reliability
+  Subcategory: drift
+  Parameters: 45
+  tmaxfrac levels: [0.0]
+  Source: 10HV SOA OXRisk Drift 
+  Description: OxideRisk for design: sym devices, gate caps, CDP
+  Sample parameters:
+    - nmos, nmos_LL, nmos_ULL, pmos, pmos_LL, pmos_ULL (general, dimensionless)
+      tmaxfrac constraints: {0.0: 'vlow'}
+    - V[g]-V[b] (general, V)
+      tmaxfrac constraints: {0.0: -1.32}
+    - V[g]-V[s] (general, V)
+      tmaxfrac constraints: {0.0: -1.32}
+    ... and 42 more
+
+SUBSTRATE_WELL_HIGH_VOLTAGE:
+  Name: Substrate HV
+  Type: substrate
+  Category: well
+  Subcategory: high_voltage
+  Parameters: 27
+  tmaxfrac levels: [0.0]
+  Source: 10HV SOA SUB Well HV 
+  Description: 100V/40V substrate rules
+  Sample parameters:
+    - v[sub]-v[s]  (general, V)
+      tmaxfrac constraints: {0.0: -70.0}
+    - v[sub]-v[s]  (general, V)
+      tmaxfrac constraints: {0.0: -38.0}
+    - v[sub]-v[s]  (general, V)
+      tmaxfrac constraints: {0.0: -42.0}
+    ... and 24 more
+
+SUBSTRATE_WELL_HIGH_VOLTAGE_ADDITIONAL:
+  Name: Substrate HV Additional
+  Type: substrate
+  Category: well
+  Subcategory: high_voltage_additional
+  Parameters: 8
+  tmaxfrac levels: [0.0]
+  Source: 10HV SOA SUB Well HV 
+  Description: Additional HV substrate rules
+  Sample parameters:
+    - VMS metal_net checks (general, V)
+      tmaxfrac constraints: {0.0: 'vlow'}
+    - (v[d]-v[s])  (general, V)
+      tmaxfrac constraints: {0.0: -15.0}
+    - (v[d]-v[s])  (general, V)
+      tmaxfrac constraints: {0.0: -45.0}
+    ... and 5 more
+
+DIODE_GENERAL_FORWARD_REVERSE:
+  Name: Diodes
+  Type: diode
+  Category: general
+  Subcategory: forward_reverse
+  Parameters: 8
+  tmaxfrac levels: [0.0]
+  Source: 10HV Diodes FWD-REV
+  Description: Diode REV and FWD limits
+  Sample parameters:
+    - dz5, dz5b (general, dimensionless)
+      tmaxfrac constraints: {0.0: 5.8}
+    - drsf45b (general, dimensionless)
+      tmaxfrac constraints: {0.0: 45.0}
+    - drsf90b (general, dimensionless)
+      tmaxfrac constraints: {0.0: 'min(90, 90+V[p]-v[sub])'}
+    ... and 5 more
+
+BJT_NPN_GENERAL:
+  Name: BJT NPN
+  Type: bjt
+  Category: npn
+  Subcategory: general
+  Parameters: 20
+  tmaxfrac levels: [0.0]
+  Source: 10HV BJT REV 
+  Description: npn_b
+  Sample parameters:
+    - V[e]-V[b]: drift0 (default) (current, V)
+      tmaxfrac constraints: {0.0: 'no-limit'}
+    - V[e]-V[b]: drift1 (current, V)
+      tmaxfrac constraints: {0.0: 'no-limit'}
+    - V[b]-V[e]:drift0 (default) (current, V)
+      tmaxfrac constraints: {0.0: 'no-limit'}
+    ... and 17 more
+
+BJT_PNP_GENERAL:
+  Name: BJT PNP
+  Type: bjt
+  Category: pnp
+  Subcategory: general
+  Parameters: 16
+  tmaxfrac levels: [0.0]
+  Source: 10HV BJT REV 
+  Description: pnp, pnp_iso
+  Sample parameters:
+    - v[c]-v[sub]  (general, V)
+      tmaxfrac constraints: {0.0: -70.0}
+    - v[e]-v[sub] (general, V)
+      tmaxfrac constraints: {0.0: 'no-limit'}
+    - v[sub]-v[c] (general, V)
+      tmaxfrac constraints: {0.0: -70.0}
+    ... and 13 more
+
+BJT_PNP_ISOLATED:
+  Name: BJT PNP ISO
+  Type: bjt
+  Category: pnp
+  Subcategory: isolated
+  Parameters: 13
+  tmaxfrac levels: [0.0]
+  Source: 10HV BJT REV 
+  Description: pnp_iso special limits
+  Sample parameters:
+    - Reverse Rules (as-is, no change) (current, V)
+      tmaxfrac constraints: {0.0: 'vlow'}
+    - v[c]-v[b] (general, V)
+      tmaxfrac constraints: {0.0: 'no-limit'}
+    - v[c]-v[e]  (general, V)
+      tmaxfrac constraints: {0.0: 'no-limit'}
+    ... and 10 more

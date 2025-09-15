@@ -1,8 +1,0 @@
-SOA Rules Conversion Log
-==============================
-
-✅ Successfully converted: 10HV SOA SYM ON-OFF
-✅ Successfully converted: 10HV SOA CAPS
-✅ Successfully converted: 10HV SOA SUB Well 
-✅ Successfully converted: 10HV SOA OXRisk Drift 
-✅ Successfully converted: 10HV SOA SUB Well HV 

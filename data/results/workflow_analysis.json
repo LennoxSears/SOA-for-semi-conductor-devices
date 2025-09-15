@@ -1,0 +1,47 @@
+{
+  "rule_patterns": {
+    "simple_numeric": 390,
+    "equations": 273,
+    "functions": 0,
+    "temperature_dependent": 15,
+    "multi_pin_voltage": 9,
+    "current_rules": 0,
+    "tmaxfrac_constraints": 274,
+    "complex_expressions": 0
+  },
+  "total_rules": 277,
+  "problems": {
+    "manual_implementation": {
+      "description": "Each rule must be manually implemented in model code",
+      "impact": "Time-consuming, error-prone, inconsistent implementation",
+      "frequency": "Every new SOA rule set (monthly/quarterly)"
+    },
+    "no_unified_format": {
+      "description": "Rules come in arbitrary Excel formats with no standardization",
+      "impact": "Requires manual parsing and interpretation each time",
+      "frequency": "Every Excel delivery"
+    },
+    "manual_qa_testing": {
+      "description": "Each rule must be individually tested through simulation",
+      "impact": "Extensive simulation time, potential for missed edge cases",
+      "frequency": "Every rule implementation"
+    },
+    "rule_complexity_variety": {
+      "description": "Rules range from simple numbers to complex equations with functions",
+      "impact": "Different implementation approaches needed for each type",
+      "frequency": "Continuous"
+    },
+    "dependency_management": {
+      "description": "Rules depend on voltages, currents, temperature, device parameters",
+      "impact": "Complex dependency tracking and validation required",
+      "frequency": "Most rules"
+    },
+    "version_control": {
+      "description": "No systematic way to track rule changes and versions",
+      "impact": "Difficult to maintain consistency across updates",
+      "frequency": "Every update cycle"
+    }
+  },
+  "estimated_cost_hours": 1108.0,
+  "estimated_cost_days": 138.5
+}
