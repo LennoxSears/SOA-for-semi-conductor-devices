@@ -1,0 +1,80 @@
+[tool.poetry]
+name = "soa-semiconductor-rules"
+version = "1.0.0"
+description = "SOA (Safe Operating Area) rules analysis and unified DSL for SMOS10HV semiconductor technology"
+authors = ["Your Organization <your-email@company.com>"]
+readme = "README.md"
+packages = [{include = "soa_rules", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.0.0"
+openpyxl = "^3.1.0"
+xlrd = "^2.0.0"
+numpy = "^1.24.0"
+matplotlib = "^3.7.0"
+seaborn = "^0.12.0"
+pyyaml = "^6.0"
+jsonschema = "^4.17.0"
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+black = "^23.0.0"
+flake8 = "^6.0.0"
+mypy = "^1.5.0"
+pre-commit = "^3.3.0"
+
+[tool.poetry.scripts]
+soa-extract = "soa_rules.complete_rule_extractor:main"
+soa-demo = "soa_rules.demo_soa_dsl:main"
+soa-validate = "soa_rules.validation_summary:main"
+soa-audit = "soa_rules.complete_extraction_audit:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --strict-markers --strict-config"
+testpaths = [
+    "tests",
+]
+pythonpath = [
+    "src",
+]

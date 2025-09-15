@@ -257,31 +257,66 @@ print(f"Failed: {report['summary']['failed']}")
 
 ## Getting Started
 
-1. **Install Dependencies**:
-   ```bash
-   pip install pandas openpyxl pyyaml jsonschema
-   ```
+### **🚀 Quick Start with Poetry (Recommended)**
 
-2. **Convert Excel to DSL**:
-   ```bash
-   python excel_to_dsl_converter.py
-   ```
+```bash
+# 1. Install Poetry (if not already installed)
+curl -sSL https://install.python-poetry.org | python3 -
 
-3. **Use Generated Rules**:
-   ```python
-   from soa_rules import load_soa_rules
-   soa = load_soa_rules()
-   # Start validating your designs!
-   ```
+# 2. Clone and setup project
+git clone <your-repo-url>
+cd SOA-for-semi-conductor-devices
+
+# 3. Install dependencies in isolated virtual environment
+poetry install
+
+# 4. Run SOA analysis
+make extract    # Extract all 744 parameters
+make demo      # Run comprehensive demonstration
+make test      # Run test suite
+```
+
+### **📋 Alternative: Manual Setup**
+
+```bash
+# 1. Install dependencies
+pip install pandas openpyxl pyyaml jsonschema
+
+# 2. Extract all SOA rules
+python complete_rule_extractor.py
+
+# 3. Run demonstrations
+python demo_soa_dsl.py
+```
+
+### **🎯 Key Commands**
+
+```bash
+# Using Poetry + Makefile (recommended)
+make help          # Show all available commands
+make extract       # Extract all SOA rules from Excel
+make demo         # Run comprehensive demonstration
+make validate     # Validate extraction against Excel
+make test         # Run test suite
+make clean        # Clean up generated files
+
+# Using Poetry scripts
+poetry run soa-extract    # Extract rules
+poetry run soa-demo      # Run demo
+poetry run soa-validate  # Validate extraction
+```
 
 ## Technology Stack
 
-- **Python 3.12+**: Core implementation language
+- **Python 3.10+**: Core implementation language
+- **Poetry**: Dependency management and virtual environments
 - **pandas**: Excel file processing
 - **openpyxl**: Excel file reading
 - **jsonschema**: Rule validation
 - **dataclasses**: Type-safe rule definitions
-- **enum**: Structured parameter types
+- **pytest**: Testing framework
+- **black**: Code formatting
+- **mypy**: Type checking
 
 ## Contributing
 
