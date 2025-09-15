@@ -1,0 +1,71 @@
+🎯 ENHANCED EXTRACTION SUMMARY:
+   Method: tmaxfrac + general parameter blocks
+   Total devices: 13
+   Total parameters: 277
+   Coverage: Both tmaxfrac rules and general parameter constraints
+
+📋 NMOS Core:
+   Parameters: 40
+   tmaxfrac levels: [0.1, 0.01, 0.0]
+   Sheet: 10HV SOA SYM ON-OFF
+
+📋 PMOS Core:
+   Parameters: 30
+   tmaxfrac levels: [0.1, 0.01, 0.0]
+   Sheet: 10HV SOA SYM ON-OFF
+
+📋 NMOS 5V:
+   Parameters: 20
+   tmaxfrac levels: [0.1, 0.01, 0.0]
+   Sheet: 10HV SOA SYM ON-OFF
+
+📋 PMOS 5V:
+   Parameters: 10
+   tmaxfrac levels: [0.1, 0.01, 0.0]
+   Sheet: 10HV SOA SYM ON-OFF
+
+📋 All Capacitors:
+   Parameters: 15
+   tmaxfrac levels: [0.1, 0.01, 0.0]
+   Sheet: 10HV SOA CAPS
+
+📋 Substrate Well:
+   Parameters: 20
+   tmaxfrac levels: [0.0]
+   Sheet: 10HV SOA SUB Well 
+
+📋 Oxide Reliability:
+   Parameters: 46
+   tmaxfrac levels: [0.0]
+   Sheet: 10HV SOA OXRisk Drift 
+
+📋 Substrate HV:
+   Parameters: 30
+   tmaxfrac levels: [0.0]
+   Sheet: 10HV SOA SUB Well HV 
+
+📋 Substrate HV Additional:
+   Parameters: 8
+   tmaxfrac levels: [0.0]
+   Sheet: 10HV SOA SUB Well HV 
+
+📋 Diodes:
+   Parameters: 8
+   tmaxfrac levels: [0.0]
+   Sheet: 10HV Diodes FWD-REV
+
+📋 BJT NPN:
+   Parameters: 21
+   tmaxfrac levels: [0.0]
+   Sheet: 10HV BJT REV 
+
+📋 BJT PNP:
+   Parameters: 16
+   tmaxfrac levels: [0.0]
+   Sheet: 10HV BJT REV 
+
+📋 BJT PNP ISO:
+   Parameters: 13
+   tmaxfrac levels: [0.0]
+   Sheet: 10HV BJT REV 
+
