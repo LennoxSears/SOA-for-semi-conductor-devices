@@ -1,0 +1,424 @@
+{
+  "toolchain_components": [
+    {
+      "name": "Excel Rule Extractor",
+      "type": "parser",
+      "description": "Automatically extract SOA rules from arbitrary Excel formats",
+      "inputs": [
+        "Excel files (.xlsx)",
+        "Extraction patterns",
+        "Device mappings"
+      ],
+      "outputs": [
+        "Raw rule data (JSON)",
+        "Extraction reports",
+        "Error logs"
+      ],
+      "technologies": [
+        "Python",
+        "pandas",
+        "openpyxl",
+        "Machine Learning (pattern recognition)"
+      ],
+      "dependencies": [
+        "Pattern recognition models",
+        "Device type classifiers"
+      ]
+    },
+    {
+      "name": "DSL Parser",
+      "type": "parser",
+      "description": "Parse SOA DSL syntax into Abstract Syntax Tree (AST)",
+      "inputs": [
+        "DSL rule files (.soa)",
+        "Grammar definitions"
+      ],
+      "outputs": [
+        "AST representation",
+        "Parse errors",
+        "Symbol tables"
+      ],
+      "technologies": [
+        "ANTLR4",
+        "Python PLY",
+        "Formal grammar parsing"
+      ],
+      "dependencies": [
+        "DSL grammar specification",
+        "Lexical analyzer"
+      ]
+    },
+    {
+      "name": "Rule Validator",
+      "type": "validator",
+      "description": "Validate rule syntax, semantics, and physical constraints",
+      "inputs": [
+        "AST representation",
+        "Device models",
+        "Physical constraints"
+      ],
+      "outputs": [
+        "Validation reports",
+        "Error/warning lists",
+        "Corrected rules"
+      ],
+      "technologies": [
+        "Python",
+        "Constraint solving",
+        "Physics engines"
+      ],
+      "dependencies": [
+        "Device parameter databases",
+        "Physics validation rules"
+      ]
+    },
+    {
+      "name": "Multi-Target Code Generator",
+      "type": "compiler",
+      "description": "Generate simulation code for multiple target platforms",
+      "inputs": [
+        "Validated AST",
+        "Target platform specs",
+        "Code templates"
+      ],
+      "outputs": [
+        "Simulation code",
+        "Test benches",
+        "Documentation"
+      ],
+      "technologies": [
+        "Template engines (Jinja2)",
+        "Code generation frameworks",
+        "AST transformers"
+      ],
+      "dependencies": [
+        "Platform-specific templates",
+        "Code optimization engines"
+      ]
+    },
+    {
+      "name": "Simulation Runtime Engine",
+      "type": "runtime",
+      "description": "Execute and monitor SOA rule compliance during simulation",
+      "inputs": [
+        "Generated code",
+        "Simulation data",
+        "Runtime parameters"
+      ],
+      "outputs": [
+        "Compliance reports",
+        "Violation alerts",
+        "Performance metrics"
+      ],
+      "technologies": [
+        "Python/C++",
+        "Real-time monitoring",
+        "Event-driven systems"
+      ],
+      "dependencies": [
+        "Simulation platforms",
+        "Monitoring frameworks"
+      ]
+    },
+    {
+      "name": "Test Case Generator",
+      "type": "testing",
+      "description": "Automatically generate comprehensive test cases for all rules",
+      "inputs": [
+        "Rule specifications",
+        "Device models",
+        "Test strategies"
+      ],
+      "outputs": [
+        "Test suites",
+        "Coverage reports",
+        "Regression tests"
+      ],
+      "technologies": [
+        "Property-based testing",
+        "Constraint solving",
+        "Test automation"
+      ],
+      "dependencies": [
+        "Test frameworks",
+        "Coverage analysis tools"
+      ]
+    },
+    {
+      "name": "Rule Management System",
+      "type": "integration",
+      "description": "Version control, change tracking, and rule lifecycle management",
+      "inputs": [
+        "Rule changes",
+        "Version metadata",
+        "Approval workflows"
+      ],
+      "outputs": [
+        "Version history",
+        "Change reports",
+        "Release packages"
+      ],
+      "technologies": [
+        "Git",
+        "Database systems",
+        "Web interfaces",
+        "API frameworks"
+      ],
+      "dependencies": [
+        "Version control systems",
+        "Database backends"
+      ]
+    },
+    {
+      "name": "CAD Tool Integration",
+      "type": "integration",
+      "description": "Seamless integration with existing CAD and simulation tools",
+      "inputs": [
+        "CAD tool APIs",
+        "Simulation platforms",
+        "Rule packages"
+      ],
+      "outputs": [
+        "Integrated workflows",
+        "Plugin packages",
+        "API endpoints"
+      ],
+      "technologies": [
+        "REST APIs",
+        "Plugin architectures",
+        "Middleware"
+      ],
+      "dependencies": [
+        "CAD tool SDKs",
+        "Simulation platform APIs"
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "name": "Current Manual Process",
+      "description": "Existing manual implementation workflow",
+      "steps": [
+        "1. Receive Excel file with SOA rules",
+        "2. Manually parse and interpret each rule",
+        "3. Hand-code rule logic in simulation model",
+        "4. Individual testing of each rule",
+        "5. Debug and fix implementation issues",
+        "6. Integration testing and validation"
+      ],
+      "automation_level": "manual",
+      "time_savings": "0% (baseline)"
+    },
+    {
+      "name": "Automated DSL Workflow",
+      "description": "Fully automated workflow using SOA DSL toolchain",
+      "steps": [
+        "1. Excel Rule Extractor automatically parses Excel files",
+        "2. DSL Generator converts rules to unified DSL format",
+        "3. Rule Validator checks syntax and physics constraints",
+        "4. Code Generator produces simulation code for all platforms",
+        "5. Test Generator creates comprehensive test suites",
+        "6. Automated testing and validation pipeline",
+        "7. Integration and deployment to CAD tools"
+      ],
+      "automation_level": "fully-automated",
+      "time_savings": "90-95% time reduction"
+    },
+    {
+      "name": "Hybrid Semi-Automated Workflow",
+      "description": "Transitional workflow with manual review checkpoints",
+      "steps": [
+        "1. Automated Excel extraction with manual review",
+        "2. DSL generation with engineer approval",
+        "3. Automated validation with manual override capability",
+        "4. Code generation with manual customization options",
+        "5. Automated testing with manual verification",
+        "6. Manual integration and deployment"
+      ],
+      "automation_level": "semi-automated",
+      "time_savings": "70-80% time reduction"
+    }
+  ],
+  "system_architecture": {
+    "layers": {
+      "presentation": {
+        "description": "User interfaces and visualization",
+        "components": [
+          "Web Dashboard",
+          "CLI Tools",
+          "CAD Plugins",
+          "Report Generators"
+        ],
+        "technologies": [
+          "React/Vue.js",
+          "Python CLI",
+          "CAD SDKs",
+          "Visualization libraries"
+        ]
+      },
+      "application": {
+        "description": "Core business logic and workflows",
+        "components": [
+          "Workflow Engine",
+          "Rule Manager",
+          "Validation Engine",
+          "Code Generator"
+        ],
+        "technologies": [
+          "Python/Java",
+          "Workflow frameworks",
+          "Business rule engines"
+        ]
+      },
+      "processing": {
+        "description": "Data processing and transformation",
+        "components": [
+          "Excel Parser",
+          "DSL Parser",
+          "AST Transformer",
+          "Code Compiler"
+        ],
+        "technologies": [
+          "pandas",
+          "ANTLR4",
+          "AST libraries",
+          "Template engines"
+        ]
+      },
+      "data": {
+        "description": "Data storage and management",
+        "components": [
+          "Rule Database",
+          "Version Control",
+          "Model Repository",
+          "Cache Layer"
+        ],
+        "technologies": [
+          "PostgreSQL",
+          "Git",
+          "File systems",
+          "Redis/Memcached"
+        ]
+      }
+    },
+    "integration_points": {
+      "input": [
+        "Excel files",
+        "CAD tools",
+        "Simulation platforms",
+        "Device models"
+      ],
+      "output": [
+        "Simulation code",
+        "Test suites",
+        "Reports",
+        "API endpoints"
+      ],
+      "external_systems": [
+        "Version control",
+        "CI/CD pipelines",
+        "Monitoring systems"
+      ]
+    },
+    "deployment_options": {
+      "cloud": "Scalable cloud deployment with API access",
+      "on_premise": "Local installation for security-sensitive environments",
+      "hybrid": "Cloud processing with on-premise integration",
+      "containerized": "Docker/Kubernetes for flexible deployment"
+    }
+  },
+  "implementation_plan": {
+    "components": {
+      "Excel Rule Extractor": {
+        "effort_weeks": 8,
+        "complexity": "Medium",
+        "risk": "Low"
+      },
+      "DSL Parser": {
+        "effort_weeks": 6,
+        "complexity": "High",
+        "risk": "Medium"
+      },
+      "Rule Validator": {
+        "effort_weeks": 10,
+        "complexity": "High",
+        "risk": "Medium"
+      },
+      "Multi-Target Code Generator": {
+        "effort_weeks": 12,
+        "complexity": "High",
+        "risk": "High"
+      },
+      "Simulation Runtime Engine": {
+        "effort_weeks": 8,
+        "complexity": "Medium",
+        "risk": "Medium"
+      },
+      "Test Case Generator": {
+        "effort_weeks": 6,
+        "complexity": "Medium",
+        "risk": "Low"
+      },
+      "Rule Management System": {
+        "effort_weeks": 8,
+        "complexity": "Medium",
+        "risk": "Low"
+      },
+      "CAD Tool Integration": {
+        "effort_weeks": 10,
+        "complexity": "High",
+        "risk": "High"
+      }
+    },
+    "phases": {
+      "Phase 1 - Core DSL": {
+        "components": [
+          "DSL Parser",
+          "Rule Validator",
+          "Basic Code Generator"
+        ],
+        "duration_weeks": 16,
+        "deliverables": [
+          "Working DSL parser",
+          "Basic code generation",
+          "Validation framework"
+        ]
+      },
+      "Phase 2 - Automation": {
+        "components": [
+          "Excel Rule Extractor",
+          "Test Case Generator",
+          "Enhanced Code Generator"
+        ],
+        "duration_weeks": 14,
+        "deliverables": [
+          "Automated Excel parsing",
+          "Test automation",
+          "Multi-platform support"
+        ]
+      },
+      "Phase 3 - Integration": {
+        "components": [
+          "Simulation Runtime Engine",
+          "Rule Management System",
+          "CAD Tool Integration"
+        ],
+        "duration_weeks": 18,
+        "deliverables": [
+          "Runtime monitoring",
+          "Version control",
+          "CAD integration"
+        ]
+      }
+    }
+  },
+  "total_effort_weeks": 68,
+  "estimated_timeline": "68 weeks total, 17 months with parallel development",
+  "roi_analysis": {
+    "current_cost_per_ruleset": "138 engineering days",
+    "automated_cost_per_ruleset": "7-14 engineering days",
+    "time_savings": "90-95%",
+    "payback_period": "After 2-3 rule sets",
+    "annual_savings": "Significant reduction in engineering overhead"
+  }
+}
