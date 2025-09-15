@@ -1,0 +1,66 @@
+Device-Grouped SOA Rules Summary
+========================================
+
+Total devices: 4
+Total parameters: 104
+
+
+MOS_TRANSISTOR_CORE_NMOS:
+  Name: NMOS Core
+  Type: mos_transistor
+  Category: core
+  Subcategory: nmos
+  Parameters: 40
+  tmaxfrac levels: [0.1, 0.01, 0.0]
+  Source: 10HV SOA SYM ON-OFF
+  Description: core nmos, nmos_LL, nmos_ULL  (nmos_ULL no model avail, assume same values hold for now)
+  Parameter examples:
+    - vhigh_ds_on (voltage, V)
+    - vhigh_ds_off (voltage, V)
+    - vhigh_gc (voltage, V)
+    ... and 37 more
+
+MOS_TRANSISTOR_CORE_PMOS:
+  Name: PMOS Core
+  Type: mos_transistor
+  Category: core
+  Subcategory: pmos
+  Parameters: 30
+  tmaxfrac levels: [0.1, 0.01, 0.0]
+  Source: 10HV SOA SYM ON-OFF
+  Description: core pmos, pmos_LL, pmos_ULL  (pmos_ULL no model avail, assume same values hold for now)
+  Parameter examples:
+    - vhigh_ds_on (voltage, V)
+    - vhigh_ds_off (voltage, V)
+    - vhigh_gc (voltage, V)
+    ... and 27 more
+
+MOS_TRANSISTOR_5V_NMOS:
+  Name: NMOS 5V
+  Type: mos_transistor
+  Category: 5v
+  Subcategory: nmos
+  Parameters: 20
+  tmaxfrac levels: [0.1, 0.01, 0.0]
+  Source: 10HV SOA SYM ON-OFF
+  Description: nmos5
+  Parameter examples:
+    - vhigh_ds_on (voltage, V)
+    - vhigh_ds_off (voltage, V)
+    - vhigh_gc (voltage, V)
+    ... and 17 more
+
+CAPACITOR_GATE_LOW_VOLTAGE:
+  Name: CGLV Capacitor
+  Type: capacitor
+  Category: gate
+  Subcategory: low_voltage
+  Parameters: 14
+  tmaxfrac levels: [0.1, 0.01, 0.0]
+  Source: 10HV SOA CAPS
+  Description: CGLV
+  Parameter examples:
+    - vhigh_tnw (voltage, V)
+    - vlow_tnw (voltage, V)
+    - vhigh_tnw (voltage, V)
+    ... and 11 more

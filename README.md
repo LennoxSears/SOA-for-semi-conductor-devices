@@ -271,9 +271,10 @@ cd SOA-for-semi-conductor-devices
 poetry install
 
 # 4. Run SOA analysis
-make extract    # Extract all 744 parameters
-make demo      # Run comprehensive demonstration
-make test      # Run test suite
+make extract        # Extract rules grouped by devices (recommended)
+make extract-all    # Extract all 744 parameters (bulk extraction)
+make demo          # Run comprehensive demonstration
+make test          # Run test suite
 ```
 
 ### **📋 Alternative: Manual Setup**
@@ -294,16 +295,18 @@ python demo_soa_dsl.py
 ```bash
 # Using Poetry + Makefile (recommended)
 make help          # Show all available commands
-make extract       # Extract all SOA rules from Excel
+make extract       # Extract SOA rules grouped by devices
+make extract-all   # Extract all SOA rules (744 parameters)
 make demo         # Run comprehensive demonstration
 make validate     # Validate extraction against Excel
 make test         # Run test suite
 make clean        # Clean up generated files
 
 # Using Poetry scripts
-poetry run soa-extract    # Extract rules
-poetry run soa-demo      # Run demo
-poetry run soa-validate  # Validate extraction
+poetry run soa-extract      # Extract rules grouped by devices
+poetry run soa-extract-all  # Extract all rules (744 parameters)
+poetry run soa-demo         # Run demo
+poetry run soa-validate     # Validate extraction
 ```
 
 ## Technology Stack

@@ -27,10 +27,11 @@ mypy = "^1.5.0"
 pre-commit = "^3.3.0"
 
 [tool.poetry.scripts]
-soa-extract = "soa_rules.complete_rule_extractor:main"
-soa-demo = "soa_rules.demo_soa_dsl:main"
-soa-validate = "soa_rules.validation_summary:main"
-soa-audit = "soa_rules.complete_extraction_audit:main"
+soa-extract = "device_grouped_extractor:main"
+soa-extract-all = "complete_rule_extractor:main"
+soa-demo = "demo_soa_dsl:main"
+soa-validate = "validation_summary:main"
+soa-audit = "complete_extraction_audit:main"
 
 [build-system]
 requires = ["poetry-core"]

@@ -40,8 +40,11 @@ clean:  ## Clean up generated files
 	find . -type f -name "*.pyc" -delete
 	find . -type d -name "__pycache__" -delete
 
-extract:  ## Extract all SOA rules from Excel file
+extract:  ## Extract SOA rules grouped by devices
 	poetry run soa-extract
+
+extract-all:  ## Extract all SOA rules (744 parameters)
+	poetry run soa-extract-all
 
 demo:  ## Run SOA DSL demonstration
 	poetry run soa-demo
