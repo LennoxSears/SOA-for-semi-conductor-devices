@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Navigation</title>
+    <style>
+        /* Professional print and screen styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+        }
+        
+        /* Headers */
+        h1 {
+            color: #1e3a8a;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 10px;
+            page-break-after: avoid;
+        }
+        
+        h2 {
+            color: #1e40af;
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #60a5fa;
+            padding-bottom: 5px;
+            page-break-after: avoid;
+        }
+        
+        h3 {
+            color: #2563eb;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            page-break-after: avoid;
+        }
+        
+        h4 {
+            color: #3b82f6;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+        }
+        
+        /* Paragraphs and text */
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            background-color: #f3f4f6;
+            font-weight: bold;
+            color: #1f2937;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        
+        /* Code and preformatted text */
+        code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        
+        pre {
+            background-color: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-x: auto;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+        
+        /* Blockquotes */
+        blockquote {
+            border-left: 4px solid #3b82f6;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #eff6ff;
+            font-style: italic;
+        }
+        
+        /* Emphasis boxes */
+        .highlight {
+            background-color: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        .success {
+            background-color: #d1fae5;
+            border: 1px solid #10b981;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        .info {
+            background-color: #dbeafe;
+            border: 1px solid #3b82f6;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        /* Print-specific styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 15mm;
+                font-size: 12px;
+            }
+            
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+            h3 { font-size: 16px; }
+            h4 { font-size: 14px; }
+            
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .no-print {
+                display: none;
+            }
+            
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+            
+            a:after {
+                content: " (" attr(href) ")";
+                font-size: 10px;
+                color: #666;
+            }
+        }
+        
+        /* Screen-specific styles */
+        @media screen {
+            body {
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                margin: 20px auto;
+            }
+        }
+        
+        /* Utility classes */
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
+        .font-bold { font-weight: bold; }
+        .text-large { font-size: 18px; }
+        .text-small { font-size: 14px; }
+        .margin-top { margin-top: 30px; }
+        
+        /* Header and footer for print */
+        .print-header {
+            display: none;
+        }
+        
+        @media print {
+            .print-header {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 10mm;
+                background: white;
+                border-bottom: 1px solid #ccc;
+                padding: 5mm;
+                font-size: 10px;
+                color: #666;
+            }
+            
+            body {
+                margin-top: 15mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-header">
+        SOA Automation Proposal - Project Navigation - Generated: 2025-09-16
+    </div>
+<h1>SOA Project Index</h1>
+<p>Complete navigation guide for the SOA Rules for Semiconductor Devices project.</p>
+<h2>📁 Directory Structure</h2>
+<h3>📚 Documentation (`docs/`)</h3>
+<ul>
+<li><strong>[Main README](docs/README.md)<strong> - Project overview and quick start</li>
+<li><strong>[Business Proposal](docs/proposal/SOA_DSL_Proposal.md)<strong> - Complete 20-page technical and business proposal</li>
+<li><strong>[Executive Presentation](docs/proposal/SOA_DSL_Presentation.md)<strong> - 20-slide PowerPoint-style presentation</li>
+<li><strong>[Analysis Reports](docs/reports/)<strong> - Detailed extraction and validation reports</li>
+<li><strong>[Setup Guide](docs/guides/POETRY_SETUP.md)<strong> - Environment setup instructions</li>
+</ul>
+<h3>💻 Source Code (`src/`)</h3>
+<h4>Extraction Tools (`src/extraction/`)</h4>
+<ul>
+<li><strong>[Enhanced Extractor](src/extraction/enhanced_extractor.py)<strong> - Main extraction tool (277 parameters)</li>
+<li><strong>[Improved tmaxfrac Extractor](src/extraction/improved_tmaxfrac_extractor.py)<strong> - Focused tmaxfrac extraction</li>
+<li><strong>[Simple Device Mapper](src/extraction/simple_device_mapper.py)<strong> - Device mapping generator</li>
+<li><strong>[Excel to DSL Converter](src/extraction/excel_to_dsl_converter.py)<strong> - Convert Excel to DSL format</li>
+<li><strong>[Final Results Generator](src/extraction/final_results_generator.py)<strong> - Generate final organized results</li>
+</ul>
+<h4>DSL Implementation (`src/dsl/`)</h4>
+<ul>
+<li><strong>[DSL Specification](src/dsl/soa_dsl_specification.py)<strong> - Complete DSL language specification</li>
+<li><strong>[DSL Implementation](src/dsl/soa_dsl_implementation.py)<strong> - Core DSL engine and validation</li>
+<li><strong>[DSL Demo](src/dsl/demo_soa_dsl.py)<strong> - Demonstration of DSL capabilities</li>
+</ul>
+<h4>Validation Tools (`src/validation/`)</h4>
+<ul>
+<li><strong>[Validation Comparison](src/validation/validation_comparison.py)<strong> - Compare extraction methods</li>
+<li><strong>[Test Single Sheet](src/validation/test_single_sheet.py)<strong> - Debug individual sheet extraction</li>
+</ul>
+<h4>Automation Tools (`src/automation/`)</h4>
+<ul>
+<li><strong>[Automation Benefits Analysis](src/automation/automation_benefits_analysis.py)<strong> - ROI and benefits calculation</li>
+<li><strong>[Implementation Architecture](src/automation/implementation_architecture.py)<strong> - Toolchain architecture design</li>
+<li><strong>[Workflow Analysis](src/automation/workflow_analysis.py)<strong> - Current workflow analysis</li>
+</ul>
+<h3>📊 Data Files (`data/`)</h3>
+<h4>Source Data (`data/source/`)</h4>
+<ul>
+<li><strong>[SMOS10HV Excel File](data/source/SMOS10HV_SOA_Multi_PlusSmoke_Update_EngrRel_v3.17ER_06122025\ \ 2.xlsx)<strong> - Original SOA rules Excel file</li>
+</ul>
+<h4>Extracted Data (`data/extracted/`)</h4>
+<ul>
+<li><strong>[Complete SOA Rules](data/extracted/complete_soa_rules.json)<strong> - All 744 extracted parameters</li>
+<li><strong>[Device Grouped Rules](data/extracted/device_grouped_soa_rules.json)<strong> - Original 34-parameter extraction</li>
+<li><strong>[SOA Rules](data/extracted/soa_rules.json)<strong> - Basic rule extraction</li>
+</ul>
+<h4>Mappings (`data/mappings/`)</h4>
+<ul>
+<li><strong>[Simple Device Mapping](data/mappings/simple_device_mapping.json)<strong> - Device type mappings</li>
+<li><strong>[Pattern Mapping](data/mappings/pattern_mapping.json)<strong> - Excel pattern configurations</li>
+</ul>
+<h4>Results (`data/results/`)</h4>
+<ul>
+<li><strong>[Final SOA Device Rules](data/results/final_soa_device_rules.json)<strong> - Final organized results (277 parameters)</li>
+<li><strong>[Enhanced Device Rules](data/results/enhanced_device_grouped_rules.json)<strong> - Enhanced extraction results</li>
+<li><strong>[DSL Specification](data/results/soa_dsl_specification.json)<strong> - Complete DSL specification</li>
+<li><strong>[Toolchain Architecture](data/results/soa_toolchain_architecture.json)<strong> - Implementation architecture</li>
+<li><strong>[Automation Analysis](data/results/soa_automation_analysis.json)<strong> - ROI and benefits analysis</li>
+</ul>
+<h3>📈 Visual Assets (`assets/`)</h3>
+<ul>
+<li><strong>[Automation Comparison Chart](assets/charts/soa_automation_comparison.png)<strong> - Current vs automated workflow</li>
+<li><strong>[ROI Timeline Chart](assets/charts/soa_roi_timeline.png)<strong> - 5-year ROI projection</li>
+</ul>
+<h3>🧪 Tests (`tests/`)</h3>
+<ul>
+<li><strong>[DSL Tests](tests/unit/test_soa_dsl.py)<strong> - Unit tests for DSL implementation</li>
+</ul>
+<h3>🔧 Scripts (`scripts/`)</h3>
+<ul>
+<li><strong>[Setup Scripts](scripts/setup/)<strong> - Project organization and setup tools</li>
+<li><strong>[Analysis Scripts](scripts/analysis/)<strong> - One-off analysis and debugging tools</li>
+</ul>
+<h2>🎯 Key Entry Points</h2>
+<h3>For Business Stakeholders</h3>
+<p>1. <strong>[Executive Summary](docs/proposal/SOA_DSL_Presentation.md)<strong> - Start here for business case</p>
+<p class="highlight">2. <strong>[ROI Analysis](assets/charts/soa_roi_timeline.png)<strong> - Visual ROI projection</p>
+<p>3. <strong>[Business Proposal](docs/proposal/SOA_DSL_Proposal.md)<strong> - Complete business case</p>
+<h3>For Technical Teams</h3>
+<p>1. <strong>[Main README](docs/README.md)<strong> - Technical overview and quick start</p>
+<p>2. <strong>[Enhanced Extractor](src/extraction/enhanced_extractor.py)<strong> - Main extraction tool</p>
+<p>3. <strong>[DSL Implementation](src/dsl/soa_dsl_implementation.py)<strong> - Core DSL engine</p>
+<p>4. <strong>[Final Results](data/results/final_soa_device_rules.json)<strong> - Complete extracted data</p>
+<h3>For Implementation Planning</h3>
+<p>1. <strong>[Implementation Architecture](src/automation/implementation_architecture.py)<strong> - Technical architecture</p>
+<p class="highlight">2. <strong>[Automation Benefits](src/automation/automation_benefits_analysis.py)<strong> - ROI calculations</p>
+<p>3. <strong>[Workflow Analysis](src/automation/workflow_analysis.py)<strong> - Current state analysis</p>
+<h2>📊 Project Metrics</h2>
+<h3>Extraction Performance</h3>
+<ul>
+<li><strong>Original Method<strong>: 34 parameters from 4 devices</li>
+<li><strong>Enhanced Method<strong>: 277 parameters from 13 devices</li>
+<li><strong>Improvement<strong>: 8.1x parameter increase, 714.7% coverage improvement</li>
+</ul>
+<h3>Business Impact</h3>
+<ul>
+<li><strong>Time Reduction<strong>: 98% (1,228 hours → 25 hours per rule set)</li>
+<li><strong>Annual Savings<strong>: $485,200</li>
+<li><strong>Payback Period<strong>: 4.7 months</li>
+<li><strong>3-Year ROI<strong>: 656%</li>
+</ul>
+<h3>Technical Coverage</h3>
+<ul>
+<li><strong>Device Types<strong>: 6 (MOS, BJT, Diodes, Capacitors, Substrate, Oxide)</li>
+<li><strong>Rule Types<strong>: Simple numeric, equations, functions, tmaxfrac, conditional</li>
+<li><strong>Validation<strong>: Comprehensive error checking and validation</li>
+</ul>
+<h2>🚀 Quick Navigation</h2>
+<h3>Want to understand the business case?</h3>
+<p>→ [Executive Presentation](docs/proposal/SOA_DSL_Presentation.md)</p>
+<h3>Want to see the technical solution?</h3>
+<p>→ [DSL Implementation](src/dsl/soa_dsl_implementation.py)</p>
+<h3>Want to run the extraction?</h3>
+<p>→ [Enhanced Extractor](src/extraction/enhanced_extractor.py)</p>
+<h3>Want to see the results?</h3>
+<p>→ [Final Results](data/results/final_soa_device_rules.json)</p>
+<h3>Want to understand the ROI?</h3>
+<p>→ [Automation Benefits Analysis](src/automation/automation_benefits_analysis.py)</p>
+<h3>Want to implement the solution?</h3>
+<p>→ [Implementation Architecture](src/automation/implementation_architecture.py)</p>
+<h2>📞 Getting Help</h2>
+<p>1. <strong>Technical Questions<strong>: Check the source code documentation</p>
+<p>2. <strong>Business Questions<strong>: Review the proposal documents</p>
+<p>3. <strong>Implementation Questions<strong>: Consult the architecture documents</p>
+<p>4. <strong>Data Questions<strong>: Examine the results and analysis files</p>
+<p>---</p>
+<p><em>This index provides complete navigation for all aspects of the SOA automation project, from business case to technical implementation.<em></p>
+</body>
+</html>

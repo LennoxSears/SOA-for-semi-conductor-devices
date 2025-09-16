@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start Guide</title>
+    <style>
+        /* Professional print and screen styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+        }
+        
+        /* Headers */
+        h1 {
+            color: #1e3a8a;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 10px;
+            page-break-after: avoid;
+        }
+        
+        h2 {
+            color: #1e40af;
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #60a5fa;
+            padding-bottom: 5px;
+            page-break-after: avoid;
+        }
+        
+        h3 {
+            color: #2563eb;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            page-break-after: avoid;
+        }
+        
+        h4 {
+            color: #3b82f6;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+        }
+        
+        /* Paragraphs and text */
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            background-color: #f3f4f6;
+            font-weight: bold;
+            color: #1f2937;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        
+        /* Code and preformatted text */
+        code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        
+        pre {
+            background-color: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-x: auto;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+        
+        /* Blockquotes */
+        blockquote {
+            border-left: 4px solid #3b82f6;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #eff6ff;
+            font-style: italic;
+        }
+        
+        /* Emphasis boxes */
+        .highlight {
+            background-color: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        .success {
+            background-color: #d1fae5;
+            border: 1px solid #10b981;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        .info {
+            background-color: #dbeafe;
+            border: 1px solid #3b82f6;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        /* Print-specific styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 15mm;
+                font-size: 12px;
+            }
+            
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+            h3 { font-size: 16px; }
+            h4 { font-size: 14px; }
+            
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .no-print {
+                display: none;
+            }
+            
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+            
+            a:after {
+                content: " (" attr(href) ")";
+                font-size: 10px;
+                color: #666;
+            }
+        }
+        
+        /* Screen-specific styles */
+        @media screen {
+            body {
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                margin: 20px auto;
+            }
+        }
+        
+        /* Utility classes */
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
+        .font-bold { font-weight: bold; }
+        .text-large { font-size: 18px; }
+        .text-small { font-size: 14px; }
+        .margin-top { margin-top: 30px; }
+        
+        /* Header and footer for print */
+        .print-header {
+            display: none;
+        }
+        
+        @media print {
+            .print-header {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 10mm;
+                background: white;
+                border-bottom: 1px solid #ccc;
+                padding: 5mm;
+                font-size: 10px;
+                color: #666;
+            }
+            
+            body {
+                margin-top: 15mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-header">
+        SOA Automation Proposal - Quick Start Guide - Generated: 2025-09-16
+    </div>
+<h1>Quick Start Guide</h1>
+<p>Get up and running with the SOA automation tools in minutes.</p>
+<h2>🚀 1-Minute Overview</h2>
+<p class="highlight">This project automates SOA (Safe Operating Area) rule processing for semiconductor devices, reducing manual work from 138 days to 3 days per rule set.</p>
+<div class="highlight"><strong>Key Results:</strong></div>
+<ul>
+<li>277 parameters extracted (vs 34 original)</li>
+<li>6 device types supported</li>
+<li>98% time reduction</li>
+<li>$485K annual savings potential</li>
+</ul>
+<h2>🏃‍♂️ Quick Start (5 minutes)</h2>
+<h3>Step 1: Explore the Results</h3>
+<pre><code>
+# See what we've already extracted
+python examples/dsl/basic_usage.py
+</code></pre>
+<h3>Step 2: Run Extraction</h3>
+<pre><code>
+# Extract SOA rules from Excel
+python src/extraction/enhanced_extractor.py
+</code></pre>
+<h3>Step 3: View Business Case</h3>
+<pre><code>
+# Open the executive presentation
+open docs/proposal/SOA_DSL_Presentation.md
+</code></pre>
+<h2>📁 Key Files to Check</h2>
+<h3>For Business Stakeholders</h3>
+<ul>
+<li><strong>[Executive Presentation](docs/proposal/SOA_DSL_Presentation.md)<strong> - 20-slide business case</li>
+<li><strong>[ROI Chart](assets/charts/soa_roi_timeline.png)<strong> - Visual ROI projection</li>
+<li><strong>[Business Proposal](docs/proposal/SOA_DSL_Proposal.md)<strong> - Complete proposal</li>
+</ul>
+<h3>For Engineers</h3>
+<ul>
+<li><strong>[Main README](docs/README.md)<strong> - Technical overview</li>
+<li><strong>[Enhanced Extractor](src/extraction/enhanced_extractor.py)<strong> - Main extraction tool</li>
+<li><strong>[Final Results](data/results/final_soa_device_rules.json)<strong> - 277 extracted parameters</li>
+</ul>
+<h3>For Implementation</h3>
+<ul>
+<li><strong>[Implementation Architecture](src/automation/implementation_architecture.py)<strong> - Technical architecture</li>
+<li><strong>[Automation Benefits](src/automation/automation_benefits_analysis.py)<strong> - ROI calculations</li>
+</ul>
+<h2>🎯 What You'll Find</h2>
+<h3>Extraction Results</h3>
+<ul>
+<li><strong>277 SOA parameters<strong> from 13 devices</li>
+<li><strong>6 device types<strong>: MOS, BJT, Diodes, Capacitors, Substrate, Oxide</li>
+<li><strong>tmaxfrac constraints<strong>: Time-based transient limits</li>
+<li><strong>Comprehensive validation<strong>: Error checking and comparison</li>
+</ul>
+<h3>Business Case</h3>
+<ul>
+<li><strong>98% time reduction<strong>: 1,228 hours → 25 hours per rule set</li>
+<li><strong>$485K annual savings<strong>: Reduced engineering overhead</li>
+<li><strong>4.7-month payback<strong>: Rapid ROI</li>
+<li><strong>10x scalability<strong>: Process multiple rule sets per week</li>
+</ul>
+<h3>Technical Solution</h3>
+<ul>
+<li><strong>Unified DSL<strong>: Single language for all rule types</li>
+<li><strong>Automated toolchain<strong>: Excel → DSL → Simulation code</li>
+<li><strong>Pattern recognition<strong>: Handles arbitrary Excel formats</li>
+<li><strong>Multi-platform support<strong>: Generate code for any target</li>
+</ul>
+<h2>🔍 Explore Further</h2>
+<h3>Want to understand the problem?</h3>
+<p>→ [Workflow Analysis](src/automation/workflow_analysis.py)</p>
+<h3>Want to see the solution?</h3>
+<p>→ [DSL Specification](src/dsl/soa_dsl_specification.py)</p>
+<h3>Want to run extraction?</h3>
+<p>→ [Enhanced Extractor](src/extraction/enhanced_extractor.py)</p>
+<h3>Want to see ROI?</h3>
+<p>→ [Automation Benefits](src/automation/automation_benefits_analysis.py)</p>
+<h2>📊 Project Structure</h2>
+<pre><code>
+SOA-for-semi-conductor-devices/
+├── docs/           # Documentation and business case
+├── src/            # Source code by functionality
+├── data/           # Data files and results
+├── assets/         # Charts and visualizations
+├── examples/       # Usage examples
+└── tests/          # Test files
+</code></pre>
+<h2>🎯 Next Steps</h2>
+<p>1. <strong>Review the business case<strong> - Start with the executive presentation</p>
+<p>2. <strong>Explore the results<strong> - Check the extracted data</p>
+<p>3. <strong>Understand the solution<strong> - Review the DSL specification</p>
+<p>4. <strong>Plan implementation<strong> - Study the architecture documents</p>
+<p>5. <strong>Get approval<strong> - Present to stakeholders</p>
+<p>---</p>
+<p><strong>Need help?<strong> Check the [PROJECT_INDEX.md](PROJECT_INDEX.md) for complete navigation.</p>
+</body>
+</html>
