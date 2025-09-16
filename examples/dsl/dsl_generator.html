@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOA DSL Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            min-height: 600px;
+        }
+
+        .form-section {
+            padding: 40px;
+            background: #f8f9fa;
+        }
+
+        .output-section {
+            padding: 40px;
+            background: #2c3e50;
+            color: white;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .checkbox-item:hover {
+            border-color: #3498db;
+            background: #f0f8ff;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        .constraint-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .tmaxfrac-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            margin-top: 15px;
+        }
+
+        .tmaxfrac-level {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .output-container {
+            background: #34495e;
+            border-radius: 8px;
+            padding: 25px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            min-height: 400px;
+        }
+
+        .output-header {
+            color: #3498db;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .copy-button {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .copy-button:hover {
+            background: #2ecc71;
+        }
+
+        .copy-button:active {
+            background: #229954;
+        }
+
+        .generate-button {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .generate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .example-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .example-button {
+            background: #ecf0f1;
+            border: 2px solid #bdc3c7;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .example-button:hover {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+
+        .syntax-highlight {
+            color: #e74c3c;
+        }
+
+        .keyword {
+            color: #9b59b6;
+            font-weight: bold;
+        }
+
+        .string {
+            color: #27ae60;
+        }
+
+        .number {
+            color: #f39c12;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .constraint-inputs {
+                grid-template-columns: 1fr;
+            }
+            
+            .example-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔧 SOA DSL Generator</h1>
+            <p>Interactive tool for generating Safe Operating Area Domain Specific Language</p>
+        </div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <div class="example-buttons">
+                    <button class="example-button" onclick="loadExample('nmos')">NMOS Example</button>
+                    <button class="example-button" onclick="loadExample('pmos')">PMOS Example</button>
+                    <button class="example-button" onclick="loadExample('bjt')">BJT Example</button>
+                    <button class="example-button" onclick="loadExample('diode')">Diode Example</button>
+                    <button class="example-button" onclick="clearForm()">Clear All</button>
+                </div>
+
+                <div class="form-group">
+                    <label for="ruleName">Rule Name:</label>
+                    <input type="text" id="ruleName" placeholder="e.g., NMOS Core with tmaxfrac Levels">
+                </div>
+
+                <div class="form-group">
+                    <label for="deviceType">Device Type:</label>
+                    <select id="deviceType">
+                        <option value="">Select device type...</option>
+                        <option value="mos_transistor">MOS Transistor</option>
+                        <option value="bjt">BJT (Bipolar Junction Transistor)</option>
+                        <option value="diode">Diode</option>
+                        <option value="capacitor">Capacitor</option>
+                        <option value="resistor">Resistor</option>
+                        <option value="substrate">Substrate</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="deviceCategory">Device Category:</label>
+                    <select id="deviceCategory">
+                        <option value="">Select category...</option>
+                        <option value="core">Core</option>
+                        <option value="io">I/O</option>
+                        <option value="hv">High Voltage</option>
+                        <option value="rf">RF</option>
+                        <option value="power">Power</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter">Parameter:</label>
+                    <input type="text" id="parameter" placeholder="e.g., v[d,s], i[drain], v[g,b]">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameterType">Parameter Type:</label>
+                    <select id="parameterType">
+                        <option value="">Select type...</option>
+                        <option value="vhigh">Voltage High</option>
+                        <option value="vlow">Voltage Low</option>
+                        <option value="ihigh">Current High</option>
+                        <option value="ilow">Current Low</option>
+                        <option value="power">Power</option>
+                        <option value="temperature">Temperature</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="severity">Severity:</label>
+                    <select id="severity">
+                        <option value="">Select severity...</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                        <option value="critical">Critical</option>
+                        <option value="warning">Warning</option>
+                        <option value="info">Info</option>
+                        <option value="review">Review</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Constraints:</label>
+                    <div class="constraint-inputs">
+                        <div>
+                            <label for="constraintValue">Value:</label>
+                            <input type="text" id="constraintValue" placeholder="e.g., 1.65, no-limit">
+                        </div>
+                        <div>
+                            <label for="constraintUnit">Unit:</label>
+                            <input type="text" id="constraintUnit" placeholder="e.g., V, A, W">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="enableTmaxfrac" onchange="toggleTmaxfrac()">
+                        Enable tmaxfrac Constraints
+                    </label>
+                    
+                    <div class="tmaxfrac-section" id="tmaxfracSection" style="display: none;">
+                        <h4>tmaxfrac Levels:</h4>
+                        <div class="tmaxfrac-level">
+                            <label>0.1 (10%):</label>
+                            <input type="text" id="tmaxfrac_01" placeholder="e.g., 1.71">
+                        </div>
+                        <div class="tmaxfrac-level">
+                            <label>0.01 (1%):</label>
+                            <input type="text" id="tmaxfrac_001" placeholder="e.g., 1.84">
+                        </div>
+                        <div class="tmaxfrac-level">
+                            <label>0.0 (Never):</label>
+                            <input type="text" id="tmaxfrac_0" placeholder="e.g., 1.65">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="generate-button" onclick="generateDSL()">🚀 Generate DSL</button>
+            </div>
+
+            <div class="output-section">
+                <div class="output-header">Generated DSL Output:</div>
+                <div class="output-container" id="dslOutput">
+Click "Generate DSL" to see your SOA rule in DSL format...
+
+Example output:
+<span class="keyword">rule</span> <span class="string">nmos_core_tmaxfrac</span> {
+    <span class="keyword">name:</span> <span class="string">"NMOS Core with tmaxfrac"</span>
+    <span class="keyword">device:</span> <span class="string">mos_transistor.core.nmos</span>
+    <span class="keyword">parameter:</span> <span class="string">v[d,s]</span>
+    <span class="keyword">type:</span> <span class="string">vhigh</span>
+    <span class="keyword">severity:</span> <span class="string">high</span>
+    
+    <span class="keyword">constraints</span> {
+        <span class="keyword">vhigh:</span> <span class="number">1.65</span>
+    }
+    
+    <span class="keyword">tmaxfrac</span> {
+        <span class="number">0.1</span>: <span class="number">1.71</span>,
+        <span class="number">0.01</span>: <span class="number">1.84</span>,
+        <span class="number">0.0</span>: <span class="number">1.65</span>
+    }
+}
+                </div>
+                <button class="copy-button" onclick="copyToClipboard()">📋 Copy DSL</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleTmaxfrac() {
+            const checkbox = document.getElementById('enableTmaxfrac');
+            const section = document.getElementById('tmaxfracSection');
+            section.style.display = checkbox.checked ? 'block' : 'none';
+        }
+
+        function generateDSL() {
+            const ruleName = document.getElementById('ruleName').value || 'unnamed_rule';
+            const deviceType = document.getElementById('deviceType').value;
+            const deviceCategory = document.getElementById('deviceCategory').value;
+            const parameter = document.getElementById('parameter').value;
+            const parameterType = document.getElementById('parameterType').value;
+            const severity = document.getElementById('severity').value;
+            const constraintValue = document.getElementById('constraintValue').value;
+            const constraintUnit = document.getElementById('constraintUnit').value;
+            const enableTmaxfrac = document.getElementById('enableTmaxfrac').checked;
+
+            // Generate rule ID from name
+            const ruleId = ruleName.toLowerCase().replace(/[^a-z0-9]/g, '_');
+
+            // Build device path
+            let devicePath = deviceType;
+            if (deviceCategory) {
+                devicePath += '.' + deviceCategory;
+            }
+
+            // Build DSL
+            let dsl = `rule ${ruleId} {\n`;
+            dsl += `    name: "${ruleName}"\n`;
+            dsl += `    device: ${devicePath}\n`;
+            dsl += `    parameter: ${parameter}\n`;
+            dsl += `    type: ${parameterType}\n`;
+            dsl += `    severity: ${severity}\n`;
+            dsl += `\n`;
+
+            // Add constraints
+            dsl += `    constraints {\n`;
+            if (constraintValue) {
+                const fullValue = constraintUnit ? `${constraintValue}${constraintUnit}` : constraintValue;
+                dsl += `        ${parameterType}: ${fullValue}\n`;
+            }
+            dsl += `    }\n`;
+
+            // Add tmaxfrac if enabled
+            if (enableTmaxfrac) {
+                const tmaxfrac_01 = document.getElementById('tmaxfrac_01').value;
+                const tmaxfrac_001 = document.getElementById('tmaxfrac_001').value;
+                const tmaxfrac_0 = document.getElementById('tmaxfrac_0').value;
+
+                if (tmaxfrac_01 || tmaxfrac_001 || tmaxfrac_0) {
+                    dsl += `\n    tmaxfrac {\n`;
+                    if (tmaxfrac_01) dsl += `        0.1: ${tmaxfrac_01},\n`;
+                    if (tmaxfrac_001) dsl += `        0.01: ${tmaxfrac_001},\n`;
+                    if (tmaxfrac_0) dsl += `        0.0: ${tmaxfrac_0}\n`;
+                    dsl += `    }\n`;
+                }
+            }
+
+            dsl += `}`;
+
+            // Apply syntax highlighting
+            const highlightedDSL = applySyntaxHighlighting(dsl);
+            document.getElementById('dslOutput').innerHTML = highlightedDSL;
+        }
+
+        function applySyntaxHighlighting(dsl) {
+            return dsl
+                .replace(/\b(rule|name|device|parameter|type|severity|constraints|tmaxfrac)\b/g, '<span class="keyword">$1</span>')
+                .replace(/"([^"]*)"/g, '<span class="string">"$1"</span>')
+                .replace(/\b(\d+\.?\d*)\b/g, '<span class="number">$1</span>');
+        }
+
+        function copyToClipboard() {
+            const output = document.getElementById('dslOutput').textContent;
+            navigator.clipboard.writeText(output).then(() => {
+                const button = document.querySelector('.copy-button');
+                const originalText = button.textContent;
+                button.textContent = '✅ Copied!';
+                button.style.background = '#27ae60';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#27ae60';
+                }, 2000);
+            });
+        }
+
+        function loadExample(type) {
+            clearForm();
+            
+            const examples = {
+                nmos: {
+                    ruleName: 'NMOS Core with tmaxfrac Levels',
+                    deviceType: 'mos_transistor',
+                    deviceCategory: 'core',
+                    parameter: 'v[d,s]',
+                    parameterType: 'vhigh',
+                    severity: 'high',
+                    constraintValue: '1.65',
+                    constraintUnit: '',
+                    enableTmaxfrac: true,
+                    tmaxfrac_01: '1.71',
+                    tmaxfrac_001: '1.84',
+                    tmaxfrac_0: '1.65'
+                },
+                pmos: {
+                    ruleName: 'PMOS Core Voltage Limit',
+                    deviceType: 'mos_transistor',
+                    deviceCategory: 'core',
+                    parameter: 'v[s,d]',
+                    parameterType: 'vhigh',
+                    severity: 'high',
+                    constraintValue: '1.65',
+                    constraintUnit: '',
+                    enableTmaxfrac: true,
+                    tmaxfrac_01: '1.71',
+                    tmaxfrac_001: '1.84',
+                    tmaxfrac_0: '1.65'
+                },
+                bjt: {
+                    ruleName: 'BJT Collector-Emitter Voltage',
+                    deviceType: 'bjt',
+                    deviceCategory: 'power',
+                    parameter: 'v[c,e]',
+                    parameterType: 'vhigh',
+                    severity: 'critical',
+                    constraintValue: '12.0',
+                    constraintUnit: '',
+                    enableTmaxfrac: false
+                },
+                diode: {
+                    ruleName: 'Diode Forward Voltage',
+                    deviceType: 'diode',
+                    deviceCategory: 'power',
+                    parameter: 'v[a,k]',
+                    parameterType: 'vhigh',
+                    severity: 'medium',
+                    constraintValue: '0.7',
+                    constraintUnit: '',
+                    enableTmaxfrac: false
+                }
+            };
+
+            const example = examples[type];
+            if (example) {
+                Object.keys(example).forEach(key => {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        if (element.type === 'checkbox') {
+                            element.checked = example[key];
+                            if (key === 'enableTmaxfrac') {
+                                toggleTmaxfrac();
+                            }
+                        } else {
+                            element.value = example[key];
+                        }
+                    }
+                });
+                generateDSL();
+            }
+        }
+
+        function clearForm() {
+            document.querySelectorAll('input, select').forEach(element => {
+                if (element.type === 'checkbox') {
+                    element.checked = false;
+                } else {
+                    element.value = '';
+                }
+            });
+            document.getElementById('tmaxfracSection').style.display = 'none';
+            document.getElementById('dslOutput').innerHTML = 'Click "Generate DSL" to see your SOA rule in DSL format...';
+        }
+
+        // Load NMOS example on page load
+        window.onload = function() {
+            loadExample('nmos');
+        };
+    </script>
+</body>
+</html>
